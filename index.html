@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ninette · Authentic French Tutor | Wake Forest, NC</title>
+        <meta name="description" content="Ninette Authentic French Tutor — cours de français, immersion, FLAM et club de lecture à Wake Forest, North Carolina.">
+        <link rel="icon" type="image/webp" href="images/img-010.webp">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Ninette · Authentic French Tutor | Wake Forest, NC">
+        <meta property="og:description" content="Cours de français, immersion, FLAM et club de lecture à Wake Forest, North Carolina.">
+        <meta property="og:image" content="images/img-001.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="preload" as="image" href="images/img-001.png">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --navy: #0d2847;
+                --navy2: #173a60;
+                --gold: #b48739;
+                --gold2: #d7b56d;
+                --cream: #fbf8f0;
+                --paper: #f5efe2;
+                --ink: #172338;
+                --muted: #6b6b67;
+                --line: #d9c9a9;
+                --white: #fff
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box
+            }
+
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 88px
+            }
+
+            body {
+                font-family: 'Libre Franklin',sans-serif;
+                background: var(--cream);
+                color: var(--ink);
+                line-height: 1.55
+            }
+
+            a {
+                color: inherit
+            }
+
+            .topnav {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 24px;
+                padding: 14px clamp(18px,4vw,54px);
+                background: rgba(251,248,240,.96);
+                backdrop-filter: blur(14px);
+                border-bottom: 1px solid var(--line);
+                box-shadow: 0 8px 26px rgba(13,40,71,.08)
+            }
+
+            .topnav-brand {
+                font-family: 'Cormorant Garamond',serif;
+                font-weight: 700;
+                font-size: 1.7rem;
+                color: var(--navy);
+                letter-spacing: .02em
+            }
+
+            .topnav-brand::before {
+                content: '⚜';
+                color: var(--gold);
+                margin-right: .55rem;
+                font-size: 1rem
+            }
+
+            .topnav-links {
+                display: flex;
+                gap: 8px;
+                align-items: center
+            }
+
+            .topnav-links a {
+                font-size: .75rem;
+                font-weight: 700;
+                letter-spacing: .12em;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 10px 14px;
+                border-radius: 999px;
+                color: var(--navy);
+                transition: .2s
+            }
+
+            .topnav-links a:hover {
+                background: #efe6d4
+            }
+
+            .topnav-links .nav-cta {
+                background: var(--navy);
+                color: #fff;
+                box-shadow: 0 6px 16px rgba(13,40,71,.20)
+            }
+
+            .topnav-links .nav-cta:hover {
+                background: var(--gold);
+                color: #fff;
+                transform: translateY(-1px)
+            }
+
+            .hero {
+                background: var(--navy);
+                padding: 0
+            }
+
+            .hero-art {
+                position: relative;
+                min-height: min(72vw,760px);
+                background: var(--navy)
+            }
+
+            .hero-actions {
+                position: absolute;
+                left: 50%;
+                bottom: 34px;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 14px;
+                justify-content: center;
+                align-items: center;
+                width: min(92%,900px);
+                z-index: 2
+            }
+
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+                min-height: 50px;
+                padding: .9rem 1.4rem;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: .9rem;
+                letter-spacing: .02em;
+                border: 2px solid transparent;
+                transition: .2s;
+                box-shadow: 0 10px 28px rgba(13,40,71,.18)
+            }
+
+            .btn-primary,.hero-cta,.cta-btn {
+                background: var(--gold)!important;
+                color: #fff!important;
+                border: 2px solid #f1d59e!important;
+                box-shadow: 0 10px 26px rgba(180,135,57,.30)!important
+            }
+
+            .btn-primary:hover,.hero-cta:hover,.cta-btn:hover {
+                background: #9e712d!important;
+                transform: translateY(-2px);
+                box-shadow: 0 14px 30px rgba(13,40,71,.28)!important
+            }
+
+            .btn-secondary {
+                background: rgba(255,255,255,.94);
+                color: var(--navy);
+                border-color: #fff
+            }
+
+            .btn-secondary:hover {
+                background: #fff;
+                transform: translateY(-2px)
+            }
+
+            section {
+                padding: 5rem clamp(20px,5vw,64px);
+                max-width: 1000px;
+                margin: 0 auto
+            }
+
+            .sec-title {
+                font-family: 'Cormorant Garamond',serif;
+                font-size: clamp(2.25rem,4vw,3.3rem);
+                font-weight: 700;
+                color: var(--navy);
+                margin-bottom: .1rem;
+                line-height: 1.05
+            }
+
+            .sec-title::after {
+                content: ' ⚜';
+                font-size: .55em;
+                color: var(--gold);
+                vertical-align: middle
+            }
+
+            .sec-sub {
+                font-family: 'Cormorant Garamond',serif;
+                font-size: 1.08rem;
+                color: #8a6a35;
+                font-style: italic;
+                letter-spacing: .04em;
+                margin-bottom: 2rem
+            }
+
+            .divider {
+                height: 1px;
+                background: var(--line);
+                margin: 1.5rem 0
+            }
+
+            .service-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(205px,1fr));
+                gap: 1.15rem
+            }
+
+            .scard {
+                background: rgba(255,255,255,.88)!important;
+                border-radius: 18px!important;
+                padding: 1.6rem 1.3rem!important;
+                text-align: center;
+                border: 1px solid var(--line)!important;
+                transition: .25s;
+                box-shadow: 0 8px 24px rgba(13,40,71,.06)
+            }
+
+            .scard:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 16px 36px rgba(13,40,71,.12);
+                border-color: var(--gold)!important
+            }
+
+            .scard-icon {
+                font-size: 2rem;
+                margin-bottom: .7rem;
+                display: block
+            }
+
+            .scard h3 {
+                font-family: 'Cormorant Garamond',serif;
+                font-size: 1.45rem!important;
+                color: var(--navy)!important;
+                margin-bottom: .5rem
+            }
+
+            .scard p {
+                font-size: .82rem;
+                color: #5f6061;
+                line-height: 1.65
+            }
+
+            .pill {
+                display: inline-block;
+                font-size: .68rem;
+                font-weight: 700;
+                padding: .25rem .62rem;
+                border-radius: 999px;
+                margin: .2rem .1rem;
+                border: 1px solid var(--line)
+            }
+
+            .pill-blue {
+                background: #edf2f7;
+                color: var(--navy)
+            }
+
+            .pill-gold {
+                background: #fbf1de;
+                color: #916728
+            }
+
+            .price {
+                font-size: 1.6rem!important;
+                font-weight: 700;
+                font-family: 'Cormorant Garamond',serif;
+                margin-top: .6rem;
+                color: var(--navy)!important
+            }
+
+            .detail-box {
+                background: #fff;
+                border-radius: 22px!important;
+                padding: 2.1rem!important;
+                margin-bottom: 1.5rem!important;
+                border: 1px solid var(--line)!important;
+                box-shadow: 0 12px 34px rgba(13,40,71,.07)
+            }
+
+            .detail-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+                gap: 1.5rem;
+                margin-top: 1rem
+            }
+
+            .detail-tag {
+                border-radius: 12px;
+                padding: 1rem;
+                margin-top: 1rem;
+                font-size: .82rem;
+                color: #444;
+                background: #f8f3e8!important
+            }
+
+            .detail-box a[style*="display:inline-block"] {
+                display: inline-flex!important;
+                align-items: center;
+                justify-content: center;
+                min-height: 48px;
+                margin-top: 1.15rem!important;
+                background: var(--navy)!important;
+                color: #fff!important;
+                border: 2px solid var(--navy)!important;
+                padding: .8rem 1.4rem!important;
+                border-radius: 999px!important;
+                font-weight: 700!important;
+                font-size: .88rem!important;
+                text-decoration: none!important;
+                box-shadow: 0 8px 20px rgba(13,40,71,.18);
+                transition: .2s
+            }
+
+            .detail-box a[style*="display:inline-block"]:hover {
+                background: var(--gold)!important;
+                border-color: var(--gold)!important;
+                transform: translateY(-2px)
+            }
+
+            .about-quote {
+                font-family: 'Cormorant Garamond',serif;
+                font-style: italic;
+                font-size: 1.35rem;
+                color: var(--navy);
+                border-left: 3px solid var(--gold);
+                padding-left: 1.25rem;
+                margin-bottom: 1.25rem;
+                line-height: 1.55
+            }
+
+            .about-body {
+                font-size: .91rem;
+                line-height: 1.9;
+                color: #34383e;
+                margin-bottom: .75rem
+            }
+
+            .cred-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+                gap: .8rem;
+                margin-top: 1.5rem
+            }
+
+            .cred {
+                background: #fff;
+                border-radius: 14px;
+                padding: 1.1rem;
+                border: 1px solid var(--line);
+                text-align: center
+            }
+
+            .cred-ico {
+                font-size: 1.5rem;
+                margin-bottom: .4rem;
+                display: block
+            }
+
+            .cred h4 {
+                font-size: .82rem;
+                font-weight: 700;
+                color: var(--navy);
+                margin-bottom: .25rem
+            }
+
+            .cred p {
+                font-size: .73rem;
+                color: #666;
+                line-height: 1.5
+            }
+
+            .schedule-wrap {
+                background: #fff;
+                padding: 4.5rem clamp(20px,5vw,64px);
+                border-top: 1px solid #eee3ce;
+                border-bottom: 1px solid #eee3ce
+            }
+
+            .schedule-inner {
+                max-width: 1000px;
+                margin: 0 auto
+            }
+
+            .schedule-title {
+                font-family: 'Cormorant Garamond',serif;
+                font-size: 2.6rem;
+                color: var(--navy);
+                font-weight: 700
+            }
+
+            .schedule-sub {
+                color: #8a6a35;
+                font-family: 'Cormorant Garamond',serif;
+                font-style: italic;
+                font-size: 1.08rem;
+                margin-bottom: 1.4rem
+            }
+
+            .calendar-frame {
+                border-radius: 18px;
+                overflow: hidden;
+                box-shadow: 0 12px 32px rgba(13,40,71,.12);
+                border: 1px solid var(--line)
+            }
+
+            #contact-section {
+                background: linear-gradient(145deg,#0d2847,#173a60);
+                padding: 5rem 2rem;
+                border-top: 4px solid var(--gold)
+            }
+
+            .contact-inner {
+                max-width: 650px;
+                margin: 0 auto;
+                text-align: center
+            }
+
+            .contact-inner h2 {
+                font-family: 'Cormorant Garamond',serif;
+                font-size: 2.8rem;
+                color: #fff;
+                margin-bottom: .25rem
+            }
+
+            .csub {
+                font-family: 'Cormorant Garamond',serif;
+                font-size: 1.05rem;
+                color: #e3ca94;
+                font-style: italic;
+                margin-bottom: 2rem
+            }
+
+            .contact-rows {
+                background: rgba(255,255,255,.08);
+                border: 1px solid rgba(255,255,255,.16);
+                border-radius: 16px;
+                padding: 1.4rem;
+                margin-bottom: 1.5rem;
+                text-align: left
+            }
+
+            .crow {
+                display: flex;
+                align-items: center;
+                gap: .75rem;
+                padding: .75rem 0;
+                border-bottom: 1px solid rgba(255,255,255,.11);
+                font-size: .9rem;
+                color: #fff
+            }
+
+            .crow:last-child {
+                border: none
+            }
+
+            .cico {
+                font-size: 1.05rem;
+                color: #e8c47e;
+                width: 28px;
+                text-align: center
+            }
+
+            .cta-btn {
+                display: block;
+                padding: 1.05rem 1.2rem!important;
+                border-radius: 999px!important;
+                text-decoration: none;
+                text-align: center;
+                transition: .2s;
+                font-size: 1rem!important
+            }
+
+            .free-note {
+                font-size: .82rem;
+                color: #d9e4ef;
+                margin-top: .9rem
+            }
+
+            .contact-actions {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: .8rem;
+                margin-top: .8rem
+            }
+
+            .contact-actions a,.contact-actions button {
+                padding: .9rem;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: .86rem;
+                font-family: inherit;
+                cursor: pointer
+            }
+
+            .contact-actions .call,.contact-actions .share {
+                background: #fff;
+                color: var(--navy);
+                border: 0
+            }
+
+            .contact-actions .mail {
+                background: transparent;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,.5)
+            }
+
+            footer {
+                background: #081c31;
+                padding: 1.6rem;
+                text-align: center;
+                font-size: .78rem;
+                color: #c9d5df
+            }
+
+            footer span {
+                color: #e4bd70
+            }
+
+            @media(max-width: 760px) {
+                .topnav {
+                    align-items:flex-start
+                }
+
+                .topnav-links {
+                    gap: 3px;
+                    flex-wrap: wrap;
+                    justify-content: flex-end
+                }
+
+                .topnav-links a {
+                    font-size: .64rem;
+                    padding: 8px 9px
+                }
+
+                .hero-art {
+                    min-height: 78vh;
+                    background-position: center top
+                }
+
+                .hero-actions {
+                    bottom: 22px;
+                    flex-direction: column
+                }
+
+                .hero-actions .btn {
+                    width: min(92vw,380px)
+                }
+
+                section {
+                    padding-top: 3.6rem;
+                    padding-bottom: 3.6rem
+                }
+
+                .detail-box {
+                    padding: 1.4rem!important
+                }
+
+                .contact-actions {
+                    grid-template-columns: 1fr
+                }
+
+                .calendar-frame iframe {
+                    height: 520px
+                }
+
+                .topnav-brand {
+                    font-size: 1.35rem
+                }
+            }
+
+            @media(max-width: 520px) {
+                .topnav {
+                    padding:10px 12px;
+                    flex-direction: column;
+                    align-items: center
+                }
+
+                .topnav-links {
+                    justify-content: center
+                }
+
+                .hero-art {
+                    min-height: 72vh;
+                    margin-top: 0
+                }
+
+                .sec-title {
+                    font-size: 2.35rem
+                }
+
+                .hero-actions {
+                    bottom: 16px
+                }
+            }
+
+            /* --- Netlify-safe layout fixes: real image assets, robust grid, visible CTAs --- */
+            body {
+                overflow-x: hidden
+            }
+
+            .hero {
+                background: var(--navy);
+                padding: 0;
+                overflow: hidden
+            }
+
+            .hero-art {
+                position: relative;
+                min-height: 0!important;
+                background: var(--navy)!important
+            }
+
+            .hero-image {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: contain;
+                object-position: center top
+            }
+
+            .hero-shade {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 24%;
+                background: linear-gradient(to top,rgba(8,28,49,.78),rgba(8,28,49,0));
+                pointer-events: none
+            }
+
+            .hero-actions {
+                position: absolute;
+                left: 50%;
+                bottom: 30px;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 14px;
+                justify-content: center;
+                align-items: center;
+                width: min(92%,900px);
+                z-index: 3
+            }
+
+            .btn {
+                white-space: nowrap
+            }
+
+            #services {
+                max-width: 1120px
+            }
+
+            .service-grid {
+                display: grid!important;
+                grid-template-columns: repeat(4,minmax(0,1fr))!important;
+                gap: 1.2rem!important;
+                align-items: stretch
+            }
+
+            .scard {
+                display: flex!important;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                min-height: 285px;
+                background: #fff!important;
+                border: 1px solid var(--line)!important;
+                border-top: 4px solid var(--gold)!important;
+                border-radius: 18px!important;
+                padding: 1.6rem 1.25rem!important;
+                box-shadow: 0 10px 28px rgba(13,40,71,.09)!important;
+                overflow: hidden
+            }
+
+            .scard p {
+                max-width: 28ch
+            }
+
+            .scard .price {
+                margin-top: auto!important;
+                padding-top: 1rem
+            }
+
+            .detail-box {
+                overflow: hidden
+            }
+
+            .detail-box a[style*="display:inline-block"],.cta-btn,.nav-cta,.btn-primary {
+                outline: 0;
+                cursor: pointer
+            }
+
+            .detail-box a[style*="display:inline-block"] {
+                min-width: 190px
+            }
+
+            .topnav {
+                min-height: 76px
+            }
+
+            @media(max-width: 980px) {
+                .service-grid {
+                    grid-template-columns:repeat(2,minmax(0,1fr))!important
+                }
+
+                .hero-actions {
+                    bottom: 22px
+                }
+            }
+
+            @media(max-width: 760px) {
+                .topnav {
+                    position:sticky;
+                    top: 0;
+                    align-items: center
+                }
+
+                .hero-image {
+                    min-height: 420px;
+                    object-fit: cover;
+                    object-position: center top
+                }
+
+                .hero-actions {
+                    bottom: 18px;
+                    flex-direction: column;
+                    gap: 9px
+                }
+
+                .hero-actions .btn {
+                    width: min(88vw,390px)
+                }
+
+                .hero-shade {
+                    height: 34%
+                }
+            }
+
+            @media(max-width: 560px) {
+                .service-grid {
+                    grid-template-columns:1fr!important
+                }
+
+                .scard {
+                    min-height: 250px
+                }
+
+                .hero-image {
+                    min-height: 390px
+                }
+
+                .topnav {
+                    flex-direction: column;
+                    gap: 8px;
+                    padding: 10px 12px
+                }
+
+                .topnav-links {
+                    width: 100%;
+                    justify-content: center;
+                    flex-wrap: wrap
+                }
+
+                .topnav-links a {
+                    padding: 7px 9px
+                }
+
+                .hero-actions {
+                    position: relative;
+                    left: auto;
+                    bottom: auto;
+                    transform: none;
+                    width: auto;
+                    padding: 16px;
+                    background: var(--navy)
+                }
+
+                .hero-shade {
+                    display: none
+                }
+
+                .btn {
+                    white-space: normal
+                }
+
+                .hero-actions .btn {
+                    width: 100%
+                }
+            }
+
+            /* === HERO INTERACTIF : aucun bandeau séparé, navigation cliquable sur l'image === */
+            html {
+                scroll-padding-top: 0!important
+            }
+
+            .topnav {
+                display: none!important
+            }
+
+            .hero {
+                margin: 0!important;
+                padding: 0!important;
+                background: #fbf8f0!important
+            }
+
+            .hero-art {
+                position: relative!important;
+                width: 100%;
+                max-width: none!important;
+                overflow: hidden!important;
+                background: #fbf8f0!important
+            }
+
+            .hero-image {
+                display: block!important;
+                width: 100%!important;
+                height: auto!important;
+                min-height: 0!important;
+                object-fit: contain!important;
+                object-position: center top!important
+            }
+
+            .hero-shade,.hero-actions {
+                display: none!important
+            }
+
+            .hero-hotspot {
+                position: absolute;
+                display: block;
+                z-index: 20;
+                border-radius: 12px;
+                text-decoration: none;
+                outline: 0;
+                background: rgba(255,255,255,0);
+                border: 2px solid transparent;
+                transition: background .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease
+            }
+
+            .hero-hotspot:hover,.hero-hotspot:focus-visible {
+                background: rgba(255,248,232,.17);
+                border-color: rgba(186,126,25,.85);
+                box-shadow: 0 0 0 4px rgba(255,255,255,.50),0 8px 24px rgba(13,40,71,.18);
+                transform: translateY(-1px)
+            }
+
+            .hero-hotspot span {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0,0,0,0);
+                white-space: nowrap;
+                border: 0
+            }
+
+            /* coordonnées en pourcentage basées sur le visuel d'ouverture verrouillé 1536 × 1024 */
+            .hs-reserver {
+                left: 78.12%;
+                top: 5.37%;
+                width: 20.83%;
+                height: 8.79%;
+                border-radius: 32px
+            }
+
+            .hs-accueil {
+                left: 18.62%;
+                top: 23.63%;
+                width: 8.98%;
+                height: 5.37%
+            }
+
+            .hs-cours {
+                left: 28.39%;
+                top: 23.63%;
+                width: 9.83%;
+                height: 5.37%
+            }
+
+            .hs-about {
+                left: 39.32%;
+                top: 23.63%;
+                width: 9.77%;
+                height: 5.37%
+            }
+
+            .hs-resources {
+                left: 57.03%;
+                top: 23.63%;
+                width: 11.59%;
+                height: 5.37%
+            }
+
+            .hs-testimonials {
+                left: 69.21%;
+                top: 23.63%;
+                width: 13.80%;
+                height: 5.37%
+            }
+
+            .hs-contact {
+                left: 83.79%;
+                top: 23.63%;
+                width: 10.87%;
+                height: 5.37%
+            }
+
+            #temoignages {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 4rem clamp(20px,5vw,64px);
+                text-align: center;
+                background: var(--cream)
+            }
+
+            #temoignages .coming {
+                max-width: 680px;
+                margin: 1rem auto 0;
+                padding: 1.4rem 1.6rem;
+                border: 1px solid var(--line);
+                border-radius: 18px;
+                background: #fff;
+                box-shadow: 0 8px 24px rgba(13,40,71,.06);
+                font-family: 'Cormorant Garamond',serif;
+                font-size: 1.2rem;
+                color: var(--navy)
+            }
+
+            @media(max-width: 760px) {
+                .hero-art {
+                    overflow-x:hidden!important
+                }
+
+                .hero-image {
+                    width: 100%!important;
+                    height: auto!important;
+                    min-height: 0!important;
+                    object-fit: contain!important
+                }
+
+                .hero-hotspot {
+                    border-radius: 8px
+                }
+
+                .hs-reserver {
+                    border-radius: 20px
+                }
+            }
+
+            @media(max-width: 520px) {
+                .hero-image {
+                    min-height:0!important
+                }
+
+                .hero-hotspot:hover {
+                    transform: none
+                }
+            }
+
+            /* illustrated service banners: titles and content preserved */
+            .scard {
+                padding: 0!important;
+                overflow: hidden;
+                text-align: left!important
+            }
+
+            .scard-banner {
+                width: 100%;
+                aspect-ratio: 2.85/1;
+                object-fit: cover;
+                display: block;
+                border-bottom: 1px solid var(--line)
+            }
+
+            .scard-body {
+                padding: 1.25rem 1.3rem 1.35rem;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                flex: 1
+            }
+
+            .scard .scard-icon {
+                display: none
+            }
+
+            .scard h3 {
+                margin-top: 0
+            }
+
+            @media(max-width: 560px) {
+                .scard-banner {
+                    aspect-ratio:2.5/1
+                }
+            }
+
+            .detail-picto {
+                width: 126px;
+                height: 126px;
+                object-fit: contain;
+                border-radius: 50%;
+                border: none;
+                box-shadow: 0 8px 20px rgba(13,40,71,.12);
+                flex: 0 0 126px;
+                background: #fff
+            }
+
+            @media(max-width: 760px) {
+                .detail-picto {
+                    width:100px;
+                    height: 100px;
+                    flex-basis: 100px
+                }
+            }
+
+            @media(max-width: 560px) {
+                .detail-picto {
+                    width:84px;
+                    height: 84px;
+                    flex-basis: 84px
+                }
+            }
+
+            /* === HERO V10 VERROUILLE : image entière, aucun bandeau ne la rogne === */
+            .hero,.hero-art {
+                height: auto!important;
+                max-height: none!important;
+                overflow: visible!important
+            }
+
+            .hero-image {
+                display: block!important;
+                width: 100%!important;
+                height: auto!important;
+                max-height: none!important;
+                object-fit: contain!important;
+                object-position: center top!important
+            }
+
+            #services {
+                margin-top: 0!important
+            }
+
+            /* === BOOK CLUB — unified, JS-driven, single page, no locked mockup images === */
+            #bookclub {
+                margin: 2rem 0 2.5rem;
+                border: 1px solid #b48739;
+                border-radius: 24px;
+                overflow: hidden;
+                background: #efe4cf;
+                box-shadow: 0 20px 50px rgba(13,40,71,.13)
+            }
+
+            .bc-banner {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .bc-tabs {
+                display: grid;
+                grid-template-columns: repeat(5,minmax(0,1fr));
+                gap: .5rem;
+                padding: 1.4rem clamp(16px,4vw,42px) 0;
+            }
+
+            .bc-tab {
+                font-family: 'Cormorant Garamond',serif;
+                font-size: .85rem;
+                line-height: 1.2;
+                padding: .7rem .4rem;
+                border-radius: 10px;
+                border: 1px solid #c7ae7d;
+                background: #f8f1e3;
+                color: #173a60;
+                cursor: pointer;
+                transition: .15s;
+            }
+
+            .bc-tab:hover {
+                background: #f0e6cd;
+            }
+
+            .bc-tab.active {
+                background: #173a60;
+                color: #fff;
+                border-color: #b48739;
+                box-shadow: inset 0 -4px 0 #b48739;
+            }
+
+            .bc-count {
+                text-align: center;
+                margin-top: 1.4rem;
+                font-family: 'Cormorant Garamond',serif;
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #173a60;
+            }
+
+            .bc-count b {
+                color: #b48739;
+                font-size: 2.4rem;
+            }
+
+            .bc-progress {
+                max-width: 640px;
+                margin: .5rem auto 0;
+                height: 12px;
+                background: #d8c9ac;
+                border: 1px solid #c0aa7e;
+                border-radius: 99px;
+                overflow: hidden;
+            }
+
+            .bc-progress-fill {
+                height: 100%;
+                background: linear-gradient(90deg,#9c6d2f,#d4b36b);
+                transition: width .25s ease;
+            }
+
+            .bc-library {
+                padding: 1.6rem clamp(16px,4vw,42px) 2rem;
+            }
+
+            .bc-library-title {
+                text-align: center;
+                color: #173a60;
+                font-family: 'Cormorant Garamond',serif;
+                font-size: 1.3rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            .bc-shelf {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px 10px;
+            }
+
+            .bc-book {
+                width: 110px;
+                text-align: center;
+            }
+
+            .bc-book img {
+                width: 100%;
+                height: 150px;
+                object-fit: contain;
+                background: #f5eee0;
+                border-radius: 4px;
+                box-shadow: 3px 5px 7px rgba(44,25,12,.28);
+            }
+
+            .bc-book figcaption {
+                margin-top: .35rem;
+                font-family: 'Cormorant Garamond',serif;
+                font-size: .72rem;
+                color: #173a60;
+                line-height: 1.15;
+            }
+
+            .bc-empty {
+                grid-column: 1/-1;
+                max-width: 520px;
+                margin: 0 auto;
+                text-align: center;
+                background: #fff;
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                padding: 1.4rem 1.4rem;
+            }
+
+            .bc-empty p {
+                font-size: .85rem;
+                color: #555;
+                line-height: 1.6;
+                margin-bottom: .8rem;
+            }
+
+            .bc-empty a {
+                font-size: .82rem;
+                font-weight: 700;
+                color: var(--gold);
+                text-decoration: none;
+            }
+
+            .bc-empty a:hover {
+                text-decoration: underline;
+            }
+
+            @media(max-width: 700px) {
+                .bc-tabs {
+                    grid-template-columns: repeat(2,minmax(0,1fr));
+                }
+
+                .bc-book {
+                    width: 92px;
+                }
+
+                .bc-book img {
+                    height: 128px;
+                }
+            }
+        </style>
+        <style id="ninette-v30-paris-schedule">
+            /* V30 — Paris-themed schedule banner + real, flow-based HTML grid below it.
+   Only timetable data inside .v30-grid is intended to evolve. */
+            .v30-schedule {
+                max-width: 1536px;
+                margin: 0 auto;
+                padding: 0;
+                background: #f5eddd;
+            }
+
+            .v30-banner {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .v30-grid {
+                display: grid;
+                grid-template-columns: repeat(6,1fr);
+                gap: 12px;
+                align-items: start;
+                padding: 20px clamp(12px,2.5vw,28px) 28px;
+            }
+
+            .v30-day {
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .v30-day-head {
+                background: #173f63;
+                color: #fff8e9;
+                border: 1px solid rgba(190,142,61,.65);
+                padding: .6vw .2vw;
+                border-radius: .45vw;
+                text-align: center;
+                font: 500 clamp(10px,1.55vw,24px)/1 Georgia,"Times New Roman",serif;
+                letter-spacing: .02em;
+                text-transform: uppercase;
+                margin-bottom: .55vw;
+            }
+
+            .v30-card {
+                border-radius: .65vw;
+                padding: .55vw .35vw .6vw;
+                margin-bottom: .55vw;
+                text-align: center;
+                border: 1px solid rgba(160,135,90,.30);
+                box-shadow: 0 .22vw .55vw rgba(80,60,40,.08);
+                color: #163957;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .v30-time {
+                font: 700 clamp(7px,.88vw,14px)/1.1 Georgia,"Times New Roman",serif;
+                margin-bottom: .28vw;
+                white-space: nowrap;
+            }
+
+            .v30-course {
+                font: 700 clamp(9px,1.15vw,18px)/1.06 Georgia,"Times New Roman",serif;
+            }
+
+            .v30-level {
+                margin-top: .14vw;
+                font: 400 clamp(7px,.84vw,13px)/1.05 Georgia,"Times New Roman",serif;
+                color: #4f4a40;
+            }
+
+            .v30-mark {
+                margin-top: .25vw;
+                font-size: clamp(7px,.9vw,14px);
+                color: #173f63;
+            }
+
+            .v30-immersion {
+                background: rgba(216,231,238,.96)
+            }
+
+            .v30-high {
+                background: rgba(229,234,211,.96)
+            }
+
+            .v30-story {
+                background: rgba(242,215,211,.96)
+            }
+
+            .v30-cp {
+                background: rgba(244,228,189,.97)
+            }
+
+            .v30-elementary {
+                background: rgba(227,225,235,.96)
+            }
+
+            .v30-middle {
+                background: rgba(239,228,197,.97)
+            }
+
+            .v30-bookclub {
+                background: rgba(241,214,211,.97)
+            }
+
+            .v30-note {
+                margin-top: auto;
+                padding: .5vw .25vw;
+                text-align: center;
+                color: #294b69;
+                font: italic clamp(8px,.95vw,15px)/1.22 Georgia,"Times New Roman",serif;
+            }
+
+            @media(max-width: 980px) {
+                .v30-grid {
+                    grid-template-columns: repeat(3,1fr);
+                }
+            }
+
+            @media(max-width: 700px) {
+                .v30-grid {
+                    grid-template-columns: 1fr;
+                    gap: 12px;
+                }
+
+                .v30-day-head {
+                    font-size: 18px;
+                    padding: 12px;
+                    border-radius: 8px
+                }
+
+                .v30-card {
+                    padding: 12px;
+                    border-radius: 10px;
+                    margin-bottom: 8px
+                }
+
+                .v30-time {
+                    font-size: 13px
+                }
+
+                .v30-course {
+                    font-size: 18px
+                }
+
+                .v30-level {
+                    font-size: 13px
+                }
+
+                .v30-note {
+                    font-size: 14px
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="top" class="hero" aria-label="Ninette Authentic French Tutor">
+            <div class="hero-art">
+                <img class="hero-image" src="images/img-001.png" width="1536" height="1024" fetchpriority="high" alt="Ninette Authentic French Tutor, univers français élégant inspiré des châteaux de la Loire, de la littérature et de la bande dessinée">
+                <!-- Zones HTML transparentes superposées exactement aux boutons dessinés dans l'image. -->
+                <a class="hero-hotspot hs-reserver" href="#contact-section" aria-label="Book a session">
+                    <span>Book a session</span>
+                </a>
+                <a class="hero-hotspot hs-accueil" href="#top" aria-label="Home">
+                    <span>Home</span>
+                </a>
+                <a class="hero-hotspot hs-cours" href="#services" aria-label="Courses">
+                    <span>Courses</span>
+                </a>
+                <a class="hero-hotspot hs-about" href="#about" aria-label="About">
+                    <span>About</span>
+                </a>
+                <a class="hero-hotspot hs-resources" href="#resources" aria-label="Resources">
+                    <span>Resources</span>
+                </a>
+                <a class="hero-hotspot hs-testimonials" href="#temoignages" aria-label="Testimonials">
+                    <span>Testimonials</span>
+                </a>
+                <a class="hero-hotspot hs-contact" href="#contact-section" aria-label="Contact">
+                    <span>Contact</span>
+                </a>
+            </div>
+        </header>
+        <!-- SERVICES -->
+        <span id="resources" aria-hidden="true"></span>
+        <section id="services">
+            <div class="sec-title">What I offer · Ce que je propose</div>
+            <div class="sec-sub">French instruction for all ages and levels · Pour tous les âges et niveaux</div>
+            <div class="service-grid">
+                <div class="scard" style="border-color:#C97B3A;background:linear-gradient(135deg,#fff 80%,#FDF0E4)">
+                    <img loading="lazy" decoding="async" class="scard-banner" src="images/img-003.jpg" alt="Illustration littéraire française pour le French Book Club">
+                    <div class="scard-body">
+                        <span class="scard-icon">📚</span>
+                        <h3 style="color:#C97B3A">French Book Club</h3>
+                        <p>French reading club for ages 2–17 — age-specific books, guided reading & cultural discovery in French</p>
+                        <div style="margin-top:.75rem">
+                            <span class="pill pill-blue">Ages 2–17</span>
+                            <span class="pill pill-gold">4x / month</span>
+                        </div>
+                        <div class="price" style="color:#C97B3A">
+                            $200<span style="font-size:.8rem;color:#666;font-weight:400">/ month</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scard">
+                    <img loading="lazy" decoding="async" class="scard-banner" src="images/img-004.jpg" alt="Illustration pour Early Immersion">
+                    <div class="scard-body">
+                        <span class="scard-icon">🌱</span>
+                        <h3>Early Immersion</h3>
+                        <p>Total French immersion — young learners ages 4 to 10</p>
+                        <div style="margin-top:.75rem">
+                            <span class="pill pill-blue">Ages 4–10</span>
+                            <span class="pill pill-gold">Immersion</span>
+                        </div>
+                        <div class="price" style="color:#1B3A5C">
+                            $35<span style="font-size:.8rem;color:#666;font-weight:400">/ hour</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scard">
+                    <img loading="lazy" decoding="async" class="scard-banner" src="images/img-005.jpg" alt="Illustration scolaire française pour French I II III">
+                    <div class="scard-body">
+                        <span class="scard-icon">📖</span>
+                        <h3>French I · II · III</h3>
+                        <p>Structured French instruction for English-speaking students · Middle & High School</p>
+                        <div style="margin-top:.75rem">
+                            <span class="pill pill-blue">Grades 1–11</span>
+                            <span class="pill pill-gold">Curriculum</span>
+                        </div>
+                        <div class="price" style="color:#1B3A5C">
+                            $40<span style="font-size:.8rem;color:#666;font-weight:400">/ hour</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scard">
+                    <img loading="lazy" decoding="async" class="scard-banner" src="images/img-006.jpg" alt="Illustration de transmission de la langue française pour FLAM">
+                    <div class="scard-body">
+                        <span class="scard-icon">🏡</span>
+                        <h3>FLAM</h3>
+                        <p>French as a Heritage Language — native-level French for bilingual children</p>
+                        <div style="margin-top:.75rem">
+                            <span class="pill pill-blue">Expatriés</span>
+                            <span class="pill pill-gold">Bilingue</span>
+                        </div>
+                        <div class="price" style="color:#C97B3A">
+                            $30<span style="font-size:.8rem;color:#666;font-weight:400">/ hour</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- DETAIL SECTIONS -->
+        <div style="background:#f0ece6;padding:3rem 2rem">
+            <div style="max-width:820px;margin:0 auto">
+                <div id="detail-bookclub" class="detail-box" style="border:2px solid #C97B3A">
+                    <div style="display:flex;align-items:center;gap:1rem">
+                        <img loading="lazy" decoding="async" class="detail-picto" src="images/img-007.jpg" alt="French Book Club">
+                        <div>
+                            <h2 style="font-family:'Playfair Display',serif;color:#C97B3A;font-size:1.4rem">French Book Club · Club de lecture</h2>
+                            <div style="font-size:.85rem;color:#666">4 sessions / month · $200 per child per month</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="detail-grid">
+                        <div>
+                            <h4 style="color:#1B3A5C;margin-bottom:.5rem">🇺🇸 What it is</h4>
+                            <p style="font-size:.85rem;color:#444;line-height:1.7">
+                                One French Book Club for ages <strong>2 to 17</strong>
+                                , organized into five age-specific levels so every child or teen discovers books suited to their stage of reading. Sessions encourage a lasting love of books and help readers grow in confidence through guided reading, comprehension support, discussion and cultural discovery in French. Activities are adapted to each level. <strong>Total immersion — we leave English at the door.</strong>
+                                <br>
+                                <br>
+                                📚 <strong>Books:</strong>
+                                A carefully selected series of books, adapted to each age group, will need to be purchased separately for the program.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color:#1B3A5C;margin-bottom:.5rem">🇫🇷 En quoi ça consiste</h4>
+                            <p style="font-size:.85rem;color:#444;line-height:1.7">
+                                Un seul grand Book Club pour les <strong>2 à 17 ans</strong>
+                                , organisé en cinq niveaux afin que chaque enfant ou adolescent découvre des livres adaptés à son âge et à son parcours de lecteur. Les séances donnent envie de lire et développent la confiance grâce à la lecture guidée, l’aide à la compréhension, aux échanges et à la découverte culturelle en français. Les activités sont adaptées à chaque niveau. <strong>Immersion totale — on laisse l’anglais à la porte.</strong>
+                                <br>
+                                <br>
+                                📚 <strong>Livres :</strong>
+                                Une sélection de livres soigneusement choisie et adaptée à chaque catégorie d’âge sera à acheter séparément pour participer au programme.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="detail-tag" style="background:#FDF0E4">
+                        ✅ Ages 2–17 &nbsp;· &nbsp;✅ 5 age-specific levels &nbsp;· &nbsp;✅ 4 meetings/month &nbsp;· &nbsp;✅ <strong>$200/month per child</strong>
+                    </div>
+                    <a href='#bookclub' style='display:inline-block;margin-top:1rem;background:#C97B3A;color:#fff;padding:.65rem 1.5rem;border-radius:8px;font-weight:700;font-size:.85rem;text-decoration:none'>Join the club · Rejoindre ↗</a>
+                </div>
+                <div id="bookclub">
+                    <img class="bc-banner" loading="lazy" decoding="async" src="images/img-008-banner.webp" alt="Ninette Authentic French Tutor · French Book Club · The Great Challenge of 100 Books">
+                    <div class="bc-tabs" role="tablist" aria-label="Book Club levels">
+                        <button type="button" class="bc-tab" data-level="ages-2-5" role="tab">Ages 2–5</button>
+                        <button type="button" class="bc-tab" data-level="k-2" role="tab">Kindergarten – 2nd Grade</button>
+                        <button type="button" class="bc-tab" data-level="3-5" role="tab">3rd – 5th Grade</button>
+                        <button type="button" class="bc-tab" data-level="middle-school" role="tab">6th – 8th Grade · Middle School</button>
+                        <button type="button" class="bc-tab" data-level="high-school" role="tab">9th – 12th Grade · High School</button>
+                    </div>
+                    <div class="bc-count"><b id="bc-count-n">0</b> / 100 BOOKS DISCOVERED</div>
+                    <div class="bc-progress"><div class="bc-progress-fill" id="bc-progress-fill" style="width:0%"></div></div>
+                    <div class="bc-library">
+                        <div class="bc-library-title" id="bc-library-title">Our Growing French Library</div>
+                        <div class="bc-shelf" id="bc-shelf"></div>
+                    </div>
+                </div>
+                <div id="detail-immersion" class="detail-box" style="border:2px solid #1B3A5C">
+                    <div style="display:flex;align-items:center;gap:1rem">
+                        <img loading="lazy" decoding="async" class="detail-picto" src="images/img-048.jpg" alt="Early Immersion">
+                        <div>
+                            <h2 style="font-family:'Playfair Display',serif;color:#1B3A5C;font-size:1.4rem">Early Immersion · Immersion précoce</h2>
+                            <div style="font-size:.85rem;color:#666">Ages 4–10 · $35 per hour per child</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="detail-grid">
+                        <div>
+                            <h4 style="color:#1B3A5C;margin-bottom:.5rem">🇺🇸 What it is</h4>
+                            <p style="font-size:.85rem;color:#444;line-height:1.7">One-on-one French immersion for young children ages 4 to 10. Songs, stories, games and conversation — all in French from the very first session.</p>
+                        </div>
+                        <div>
+                            <h4 style="color:#1B3A5C;margin-bottom:.5rem">🇫🇷 En quoi ça consiste</h4>
+                            <p style="font-size:.85rem;color:#444;line-height:1.7">Cours individuels d'immersion française pour les jeunes enfants de 4 à 10 ans. Comptines, histoires, jeux et conversation — tout en français dès la première séance.</p>
+                        </div>
+                    </div>
+                    <div class="detail-tag" style="background:#E8EEF4">
+                        ✅ Ages 4–10 &nbsp;· &nbsp;✅ One-on-one &nbsp;· &nbsp;✅ Home visits available &nbsp;· &nbsp;✅ <strong>$35/hour</strong>
+                    </div>
+                </div>
+                <div id="detail-french123" class="detail-box" style="border:2px solid #1B3A5C">
+                    <div style="display:flex;align-items:center;gap:1rem">
+                        <img loading="lazy" decoding="async" class="detail-picto" src="images/img-049.jpg" alt="French I II III">
+                        <div>
+                            <h2 style="font-family:'Playfair Display',serif;color:#1B3A5C;font-size:1.4rem">French I · II · III</h2>
+                            <div style="font-size:.85rem;color:#666">Grades 1–11 · $40 per hour per child</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="detail-grid">
+                        <div>
+                            <h4 style="color:#1B3A5C;margin-bottom:.5rem">🇺🇸 What it is</h4>
+                            <p style="font-size:.85rem;color:#444;line-height:1.7">Structured French instruction from Grade 1 through Grade 11. Ideal for English-speaking students, homeschoolers, and students preparing for AP or IB French exams.</p>
+                        </div>
+                        <div>
+                            <h4 style="color:#1B3A5C;margin-bottom:.5rem">🇫🇷 En quoi ça consiste</h4>
+                            <p style="font-size:.85rem;color:#444;line-height:1.7">Cours de français structurés du CP à la Première. Idéal pour les élèves anglophones, les familles homeschooling et les candidats au baccalauréat.</p>
+                        </div>
+                    </div>
+                    <div class="detail-tag" style="background:#E8EEF4">
+                        ✅ Grades 1–11 &nbsp;· &nbsp;✅ Middle & High School &nbsp;· &nbsp;✅ AP/IB prep &nbsp;· &nbsp;✅ <strong>$40/hour</strong>
+                    </div>
+                </div>
+                <div id="detail-flam" class="detail-box" style="border:2px solid #C97B3A">
+                    <div style="display:flex;align-items:center;gap:1rem">
+                        <img loading="lazy" decoding="async" class="detail-picto" src="images/img-050.jpg" alt="FLAM">
+                        <div>
+                            <h2 style="font-family:'Playfair Display',serif;color:#C97B3A;font-size:1.4rem">FLAM · French Heritage Language</h2>
+                            <div style="font-size:.85rem;color:#666">All ages · $30 per hour per child</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="detail-grid">
+                        <div>
+                            <h4 style="color:#1B3A5C;margin-bottom:.5rem">🇺🇸 What it is</h4>
+                            <p style="font-size:.85rem;color:#444;line-height:1.7">For French-speaking families living abroad. FLAM sessions help bilingual children maintain native-level French — reading, writing, grammar and culture.</p>
+                        </div>
+                        <div>
+                            <h4 style="color:#1B3A5C;margin-bottom:.5rem">🇫🇷 En quoi ça consiste</h4>
+                            <p style="font-size:.85rem;color:#444;line-height:1.7">Pour les familles francophones vivant à l'étranger. Les séances FLAM aident les enfants bilingues à maintenir leur français à un niveau natif — lecture, écriture, grammaire et culture.</p>
+                        </div>
+                    </div>
+                    <div class="detail-tag" style="background:#FDF0E4">
+                        ✅ All ages &nbsp;· &nbsp;✅ Expatriate families &nbsp;· &nbsp;✅ Native-level French &nbsp;· &nbsp;✅ <strong>$30/hour</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="sec-title">About Ninette</div>
+            <div class="sec-sub">Mon parcours · My journey</div>
+            <div style="display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.5rem">
+                <div style="flex-shrink:0;text-align:center">
+                    <img loading="lazy" decoding="async" src="images/img-051.jpg" alt="Ninette" style="width:180px;height:180px;object-fit:cover;object-position:center top;border-radius:14px;border:3px solid #C97B3A;box-shadow:0 8px 24px rgba(27,58,92,0.15)">
+                    <div style="margin-top:.5rem;font-size:.78rem;color:#C97B3A;font-style:italic;font-weight:700">Ninette — Wake Forest, NC 🇫🇷</div>
+                </div>
+                <div style="flex:1;min-width:220px">
+                    <div class="about-quote">
+                        "I believe language is not learned — it is lived. My approach is total immersion: authentic, rigorous, and joyful."<br>
+                        <span style="font-size:.9rem;color:#C97B3A;font-style:normal">"Je crois que la langue ne s'apprend pas — elle se vit."</span>
+                    </div>
+                    <div class="about-body">
+                        My name is Ariane — my students call me <strong>Ninette</strong>
+                        . I am a native French educator based in North Carolina since 2018. With <strong>10 years in public institutions</strong>
+                        , <strong>5 years in private Catholic education</strong>
+                        , and <strong>4 years as Lead Teacher at the French School of Raleigh</strong>
+                        , I founded Ninette Authentic to bring authentic French immersion to families in the Wake Forest area.
+                    </div>
+                    <div class="about-body" style="color:#666;border-left:3px solid #C97B3A;padding-left:1rem">
+                        Je m'appelle Ariane — mes élèves m'appellent <strong>Ninette</strong>
+                        . Enseignante française native en Caroline du Nord depuis 2018. Forte de <strong>10 ans dans les institutions publiques</strong>
+                        , <strong>5 ans dans l'enseignement catholique privé</strong>
+                        et <strong>4 ans comme Lead Teacher à la French School of Raleigh</strong>
+                        , j'ai fondé Ninette Authentic pour les familles de la région de Wake Forest.
+                    </div>
+                </div>
+            </div>
+            <div class="cred-grid">
+                <div class="cred">
+                    <span class="cred-ico">📜</span>
+                    <h4>Nationally Certified French Educator — France</h4>
+                    <p>Diocèse de l'Essonne / Versailles</p>
+                </div>
+                <div class="cred">
+                    <span class="cred-ico">🎓</span>
+                    <h4>Bachelor's Degree</h4>
+                    <p>Université Paul Sabatier — Toulouse III, France</p>
+                </div>
+                <div class="cred">
+                    <span class="cred-ico">🏫</span>
+                    <h4>Lead Teacher</h4>
+                    <p>French School of Raleigh, NC — 2018–2022</p>
+                </div>
+                <div class="cred">
+                    <span class="cred-ico">🏥</span>
+                    <h4>PSC1 · First Aid</h4>
+                    <p>Croix-Rouge Française + US First Aid/CPR</p>
+                </div>
+            </div>
+        </section>
+        <!-- TESTIMONIALS -->
+        <section id="temoignages" aria-labelledby="temoignages-title">
+            <div class="sec-title" id="temoignages-title">Témoignages</div>
+            <div class="sec-sub">Paroles de familles · Family voices</div>
+            <div class="coming">Cette rubrique est prête à accueillir vos témoignages vérifiés. Les boutons de l’image y conduisent déjà.</div>
+        </section>
+        <!-- WEEKLY SCHEDULE — replaces Google Calendar -->
+        <div id="schedule" class="v30-schedule" aria-label="Weekly Class Schedule">
+            <img class="v30-banner" src="images/img-002-banner.webp" loading="lazy" decoding="async" alt="Weekly Class Schedule — French lessons for a brighter tomorrow">
+            <div class="v30-grid">
+                    <section class="v30-day" aria-label="Monday">
+                        <div class="v30-day-head">Monday</div>
+                        <div class="v30-card v30-immersion">
+                            <div class="v30-time">8:00 AM – 4:00 PM</div>
+                            <div class="v30-course">Early French Immersion</div>
+                            <div class="v30-level">Ages 4–10</div>
+                            <div class="v30-mark">❧</div>
+                        </div>
+                        <div class="v30-card v30-middle">
+                            <div class="v30-time">5:00 PM – 6:30 PM</div>
+                            <div class="v30-course">French II</div>
+                            <div class="v30-level">Middle School</div>
+                            <div class="v30-mark">⚜</div>
+                        </div>
+                        <div class="v30-card v30-bookclub">
+                            <div class="v30-time">6:30 PM – 7:30 PM</div>
+                            <div class="v30-course">Book Club</div>
+                            <div class="v30-mark">▤</div>
+                        </div>
+                    </section>
+                    <section class="v30-day" aria-label="Tuesday">
+                        <div class="v30-day-head">Tuesday</div>
+                        <div class="v30-card v30-high">
+                            <div class="v30-time">9:30 AM – 10:30 AM</div>
+                            <div class="v30-course">French I</div>
+                            <div class="v30-level">High School</div>
+                            <div class="v30-mark">⚜</div>
+                        </div>
+                        <div class="v30-card v30-story">
+                            <div class="v30-time">1:00 PM – 1:30 PM</div>
+                            <div class="v30-course">Book Club</div>
+                            <div class="v30-level">Storytime 2 to 4</div>
+                            <div class="v30-mark">✦</div>
+                        </div>
+                        <div class="v30-card v30-cp">
+                            <div class="v30-time">3:00 PM – 5:15 PM</div>
+                            <div class="v30-course">French CP</div>
+                            <div class="v30-level">Reading Method · Ages 5–6</div>
+                            <div class="v30-mark">⚜</div>
+                        </div>
+                        <div class="v30-card v30-elementary">
+                            <div class="v30-time">5:30 PM – 6:30 PM</div>
+                            <div class="v30-course">French II</div>
+                            <div class="v30-level">Elementary</div>
+                            <div class="v30-mark">⚜</div>
+                        </div>
+                        <div class="v30-card v30-bookclub">
+                            <div class="v30-time">6:30 PM – 7:30 PM</div>
+                            <div class="v30-course">Book Club</div>
+                            <div class="v30-mark">▤</div>
+                        </div>
+                    </section>
+                    <section class="v30-day" aria-label="Wednesday">
+                        <div class="v30-day-head">Wednesday</div>
+                        <div class="v30-card v30-immersion">
+                            <div class="v30-time">8:00 AM – 4:00 PM</div>
+                            <div class="v30-course">Early French Immersion</div>
+                            <div class="v30-level">Ages 4–10</div>
+                            <div class="v30-mark">❧</div>
+                        </div>
+                        <div class="v30-card v30-elementary">
+                            <div class="v30-time">4:00 PM – 6:00 PM</div>
+                            <div class="v30-course">French II</div>
+                            <div class="v30-level">Elementary</div>
+                            <div class="v30-mark">⚜</div>
+                        </div>
+                        <div class="v30-card v30-bookclub">
+                            <div class="v30-time">6:00 PM – 6:30 PM</div>
+                            <div class="v30-course">Book Club</div>
+                            <div class="v30-mark">▤</div>
+                        </div>
+                        <div class="v30-note">
+                            Des enfants curieux aux grands rêveurs,<br>le français est une aventure pour la vie.
+                        </div>
+                    </section>
+                    <section class="v30-day" aria-label="Thursday">
+                        <div class="v30-day-head">Thursday</div>
+                        <div class="v30-card v30-high">
+                            <div class="v30-time">9:30 AM – 10:30 AM</div>
+                            <div class="v30-course">French I</div>
+                            <div class="v30-level">High School</div>
+                            <div class="v30-mark">⚜</div>
+                        </div>
+                        <div class="v30-card v30-story">
+                            <div class="v30-time">1:00 PM – 1:30 PM</div>
+                            <div class="v30-course">Book Club</div>
+                            <div class="v30-level">Storytime 2 to 4</div>
+                            <div class="v30-mark">✦</div>
+                        </div>
+                        <div class="v30-card v30-cp">
+                            <div class="v30-time">3:00 PM – 5:15 PM</div>
+                            <div class="v30-course">French CP</div>
+                            <div class="v30-level">Reading Method · Ages 5–6</div>
+                            <div class="v30-mark">⚜</div>
+                        </div>
+                        <div class="v30-card v30-middle">
+                            <div class="v30-time">5:30 PM – 6:30 PM</div>
+                            <div class="v30-course">French I</div>
+                            <div class="v30-level">Middle School</div>
+                            <div class="v30-mark">⚜</div>
+                        </div>
+                        <div class="v30-card v30-bookclub">
+                            <div class="v30-time">6:30 PM – 7:30 PM</div>
+                            <div class="v30-course">Book Club</div>
+                            <div class="v30-mark">▤</div>
+                        </div>
+                    </section>
+                    <section class="v30-day" aria-label="Friday">
+                        <div class="v30-day-head">Friday</div>
+                        <div class="v30-card v30-immersion">
+                            <div class="v30-time">8:00 AM – 4:00 PM</div>
+                            <div class="v30-course">Early French Immersion</div>
+                            <div class="v30-level">Ages 4–10</div>
+                            <div class="v30-mark">❧</div>
+                        </div>
+                        <div class="v30-note">
+                            Culture · Confidence<br>Friendships for life.
+                        </div>
+                    </section>
+                    <section class="v30-day" aria-label="Saturday">
+                        <div class="v30-day-head">Saturday</div>
+                        <div class="v30-card v30-middle">
+                            <div class="v30-time">8:30 AM – 10:30 AM</div>
+                            <div class="v30-course">French II</div>
+                            <div class="v30-level">Middle School</div>
+                            <div class="v30-mark">⚜</div>
+                        </div>
+                        <div class="v30-note">
+                            Petits cours.<br>Grands horizons.
+                        </div>
+                    </section>
+            </div>
+        </div>
+        <!-- CONTACT -->
+        <div id="contact-section">
+            <div class="contact-inner">
+                <h2>Let's connect · Prenons contact</h2>
+                <div class="csub">Wake Forest, NC — Available by appointment</div>
+                <div class="contact-rows">
+                    <div class="crow">
+                        <span class="cico">📍</span>
+                        <span>Wake Forest, NC 27587 — home visits available</span>
+                    </div>
+                    <div class="crow">
+                        <span class="cico">📞</span>
+                        <span><a href="tel:+19197464971">(919) 746-4971</a></span>
+                    </div>
+                    <div class="crow">
+                        <span class="cico">✉️</span>
+                        <span><a href="mailto:arianesclass@gmail.com">arianesclass@gmail.com</a></span>
+                    </div>
+                </div>
+                <a href="mailto:arianesclass@gmail.com?subject=Reservation Request · Demande de réservation" class="cta-btn">
+                    ✦ Réserver une séance · Book a session ✦<br>
+                    <span style="font-size:.78rem;font-weight:400;opacity:.85">arianesclass@gmail.com</span>
+                </a>
+                <div class="contact-actions">
+                    <button class="share" type="button" onclick="shareNinetteSite()">↗ Share</button>
+                    <a class="mail" href="mailto:arianesclass@gmail.com">✉ Écrire · Email</a>
+                </div>
+                <div class="free-note">First session is a free discovery call · Première séance offerte</div>
+            </div>
+        </div>
+        <footer>
+            © 2026 <span>Ninette Authentic French Tutor</span>
+            · Wake Forest, NC · arianesclass@gmail.com
+        </footer>
+        <script id="bookclub-data">
+            const NINETTE_BOOK_LEVELS = {
+    "ages-2-5": {
+        "label": "Ages 2–5",
+        "books": [
+            {
+                "title": "À trois on a moins froid",
+                "src": "images/img-011.jpg"
+            },
+            {
+                "title": "Ainsi font font font les petites marionettes",
+                "src": "images/img-012.jpg"
+            },
+            {
+                "title": "Avant de dormir",
+                "src": "images/img-013.jpg"
+            },
+            {
+                "title": "Bali joue à cache-cache",
+                "src": "images/img-014.jpg"
+            },
+            {
+                "title": "Bali pique-nique à la maison",
+                "src": "images/img-015.jpg"
+            },
+            {
+                "title": "Bali va à l'école",
+                "src": "images/img-016.jpg"
+            },
+            {
+                "title": "Bonne journée",
+                "src": "images/img-017.jpg"
+            },
+            {
+                "title": "Brosse et Savon",
+                "src": "images/img-018.jpg"
+            },
+            {
+                "title": "C'est moi le plus fort",
+                "src": "images/img-019.jpg"
+            },
+            {
+                "title": "Cinq crayons coquins",
+                "src": "images/img-020.jpg"
+            },
+            {
+                "title": "Couleurs",
+                "src": "images/img-021.jpg"
+            },
+            {
+                "title": "Elmer",
+                "src": "images/img-022.jpg"
+            },
+            {
+                "title": "Entendre",
+                "src": "images/img-023.jpg"
+            },
+            {
+                "title": "Est-ce que je peux jouer",
+                "src": "images/img-024.jpg"
+            },
+            {
+                "title": "Frisson l'écureuil à la plage",
+                "src": "images/img-025.jpg"
+            },
+            {
+                "title": "je t aimerai toujours",
+                "src": "images/img-026.jpg"
+            },
+            {
+                "title": "La chèvre et les biquets",
+                "src": "images/img-027.jpg"
+            },
+            {
+                "title": "LAPIN BISOU",
+                "src": "images/img-028.jpg"
+            },
+            {
+                "title": "Le grand livre de la couleur",
+                "src": "images/img-029.jpg"
+            },
+            {
+                "title": "Les métiers",
+                "src": "images/img-030.jpg"
+            },
+            {
+                "title": "Le pain",
+                "src": "images/img-031.jpg"
+            },
+            {
+                "title": "Le soleil ça sert à quoi",
+                "src": "images/img-032.jpg"
+            },
+            {
+                "title": "Les aventures d'une petite bulle rouge",
+                "src": "images/img-033.jpg"
+            },
+            {
+                "title": "Les cinq sens",
+                "src": "images/img-034.jpg"
+            },
+            {
+                "title": "Mon papa",
+                "src": "images/img-035.jpg"
+            },
+            {
+                "title": "Océan, le noir et les couleurs",
+                "src": "images/img-036.jpg"
+            },
+            {
+                "title": "Pablo",
+                "src": "images/img-037.jpg"
+            },
+            {
+                "title": "Papa et moi",
+                "src": "images/img-038.jpg"
+            },
+            {
+                "title": "Pas facile d attendre!",
+                "src": "images/img-039.jpg"
+            },
+            {
+                "title": "Propre",
+                "src": "images/img-040.jpg"
+            },
+            {
+                "title": "Solange la Mésange",
+                "src": "images/img-041.jpg"
+            },
+            {
+                "title": "Souris",
+                "src": "images/img-042.jpg"
+            },
+            {
+                "title": "Superlapin",
+                "src": "images/img-043.jpg"
+            },
+            {
+                "title": "Toi grand et moi petit",
+                "src": "images/img-044.jpg"
+            },
+            {
+                "title": "Toucher",
+                "src": "images/img-045.jpg"
+            },
+            {
+                "title": "Trois souris en papier",
+                "src": "images/img-046.jpg"
+            },
+            {
+                "title": "Vroum! Vroum! Vroum!",
+                "src": "images/img-047.jpg"
+            }
+        ]
+    },
+    "k-2": {
+        "label": "Kindergarten – 2nd Grade",
+        "books": []
+    },
+    "3-5": {
+        "label": "3rd – 5th Grade",
+        "books": []
+    },
+    "middle-school": {
+        "label": "6th – 8th Grade · Middle School",
+        "books": [
+            {
+                "title": "Contes des quatre vents — Natha Caputo",
+                "src": "images/ms-book-01.webp"
+            },
+            {
+                "title": "Ib et la petite Christine suivi de Le jardinier et ses maîtres",
+                "src": "images/ms-book-02.webp"
+            },
+            {
+                "title": "L’appel de la forêt",
+                "src": "images/ms-book-03.webp"
+            },
+            {
+                "title": "Le dragon dans la rizière",
+                "src": "images/ms-book-04.webp"
+            },
+            {
+                "title": "Les cygnes sauvages",
+                "src": "images/ms-book-05.webp"
+            },
+            {
+                "title": "Max et les poissons",
+                "src": "images/ms-book-06.webp"
+            },
+            {
+                "title": "L’Épopée du Roi Singe — Pascal Fauliot",
+                "src": "images/ms-book-07.webp"
+            },
+            {
+                "title": "Les Aventures de Tom Sawyer — Mark Twain",
+                "src": "images/ms-book-08.webp"
+            },
+            {
+                "title": "Tobie Lolness — Tome 1 : La vie suspendue — Timothée de Fombelle",
+                "src": "images/ms-book-09.webp"
+            }
+        ]
+    },
+    "high-school": {
+        "label": "9th – 12th Grade · High School",
+        "books": []
+    }
+};
+
+            function ninetteRenderBookLevel(levelKey) {
+                const level = NINETTE_BOOK_LEVELS[levelKey];
+                if (!level) return;
+                const books = level.books;
+                document.getElementById('bc-count-n').textContent = books.length;
+                document.getElementById('bc-progress-fill').style.width = books.length + '%';
+                document.getElementById('bc-library-title').textContent =
+                    'Our Growing French Library · ' + books.length + (books.length === 1 ? ' book' : ' books') + ' and counting';
+
+                const shelf = document.getElementById('bc-shelf');
+                if (books.length === 0) {
+                    shelf.innerHTML =
+                        '<div class="bc-empty">' +
+                        '<p>This level\'s reading list is being finalized. 🇺🇸 Contact Ninette to be notified when it launches.<br>' +
+                        '🇫🇷 La liste de lecture de ce niveau est en préparation. Contactez Ninette pour être informé(e) du lancement.</p>' +
+                        '<a href="mailto:arianesclass@gmail.com?subject=Book Club — ' + level.label + '">✉ Ask about this level · Se renseigner</a>' +
+                        '</div>';
+                } else {
+                    shelf.innerHTML = books.map(function (b) {
+                        return '<figure class="bc-book" title="' + b.title.replace(/"/g, '&quot;') + '">' +
+                            '<img loading="lazy" decoding="async" src="' + b.src + '" alt="' + b.title.replace(/"/g, '&quot;') + '">' +
+                            '<figcaption>' + b.title + '</figcaption></figure>';
+                    }).join('');
+                }
+
+                document.querySelectorAll('.bc-tab').forEach(function (btn) {
+                    const active = btn.dataset.level === levelKey;
+                    btn.classList.toggle('active', active);
+                    btn.setAttribute('aria-selected', active ? 'true' : 'false');
+                });
+            }
+
+            document.querySelectorAll('.bc-tab').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    ninetteRenderBookLevel(btn.dataset.level);
+                });
+            });
+
+            ninetteRenderBookLevel('ages-2-5');
+        </script>
+        <script>
+            async function shareNinetteSite() {
+                const data = {
+                    title: 'Ninette Authentic French Tutor',
+                    text: 'Ninette Authentic French Tutor · Wake Forest, NC',
+                    url: window.location.href
+                };
+                try {
+                    if (navigator.share) {
+                        await navigator.share(data);
+                        return;
+                    }
+                    if (navigator.clipboard) {
+                        await navigator.clipboard.writeText(window.location.href);
+                        alert('Site link copied · Lien du site copié');
+                        return;
+                    }
+                    prompt('Copy this link · Copiez ce lien', window.location.href);
+                } catch (e) {
+                    if (e && e.name !== 'AbortError')
+                        prompt('Copy this link · Copiez ce lien', window.location.href);
+                }
+            }
+        </script>
+        <script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="fce3faf3-8483-4682-b70f-efec057c3a0d" data-app-host="app.netlify.com"></script>
+    </body>
+</html>
