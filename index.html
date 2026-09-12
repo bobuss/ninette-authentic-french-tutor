@@ -1135,6 +1135,67 @@
                 transition: width .25s ease;
             }
 
+            .bc-milestones {
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: .6rem;
+                max-width: 640px;
+                margin: 1.2rem auto 0;
+                text-align: center;
+            }
+
+            .bc-milestone-badge {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 52px;
+                height: 52px;
+                margin: 0 auto .4rem;
+                border-radius: 50%;
+                background: radial-gradient(circle at 35% 30%,#cbb9a0,#8f7c62 58%,#5f5138 100%);
+                border: 2px solid #d8c9ac;
+                box-shadow: 0 3px 7px rgba(61,39,18,.22);
+                color: #fff3d5;
+                font: 700 1.1rem/1 'Cormorant Garamond',serif;
+                text-shadow: 0 1px 1px #4a3d29;
+            }
+
+            .bc-milestone b {
+                display: block;
+                font-size: .78rem;
+                color: #173a60;
+                font-family: 'Cormorant Garamond',serif;
+            }
+
+            .bc-milestone small {
+                display: block;
+                font-size: .65rem;
+                color: #6a5a3f;
+                margin-top: .15rem;
+            }
+
+            .bc-milestone.reached .bc-milestone-badge {
+                background: radial-gradient(circle at 35% 30%,#e8cb86,#b48739 60%,#8a6224 100%);
+                border-color: #e2c18a;
+                box-shadow: 0 0 0 3px rgba(180,135,57,.25),0 4px 10px rgba(61,39,18,.3);
+            }
+
+            @media(max-width: 560px) {
+                .bc-milestones {
+                    gap: .35rem;
+                }
+
+                .bc-milestone-badge {
+                    width: 42px;
+                    height: 42px;
+                    font-size: .95rem;
+                }
+
+                .bc-milestone small {
+                    display: none;
+                }
+            }
+
             .bc-library {
                 padding: 1.6rem clamp(16px,4vw,42px) 2rem;
             }
@@ -1548,6 +1609,28 @@
                     </div>
                     <div class="bc-count"><b id="bc-count-n">0</b> / 100 BOOKS DISCOVERED</div>
                     <div class="bc-progress"><div class="bc-progress-fill" id="bc-progress-fill" style="width:0%"></div></div>
+                    <div class="bc-milestones" id="bc-milestones">
+                        <div class="bc-milestone" data-threshold="25">
+                            <span class="bc-milestone-badge">25</span>
+                            <b>Little Reader</b>
+                            <small>Building a love of reading!</small>
+                        </div>
+                        <div class="bc-milestone" data-threshold="50">
+                            <span class="bc-milestone-badge">50</span>
+                            <b>Story Explorer</b>
+                            <small>Discovering new worlds!</small>
+                        </div>
+                        <div class="bc-milestone" data-threshold="75">
+                            <span class="bc-milestone-badge">75</span>
+                            <b>Great Reader</b>
+                            <small>Going further in French!</small>
+                        </div>
+                        <div class="bc-milestone" data-threshold="100">
+                            <span class="bc-milestone-badge">100</span>
+                            <b>Book Club Champion</b>
+                            <small>A lifetime of possibilities!</small>
+                        </div>
+                    </div>
                     <div class="bc-library">
                         <div class="bc-library-title" id="bc-library-title">Our Growing French Library</div>
                         <div class="bc-shelf-frame">
@@ -2080,6 +2163,9 @@
                 const books = level.books;
                 document.getElementById('bc-count-n').textContent = books.length;
                 document.getElementById('bc-progress-fill').style.width = books.length + '%';
+                document.querySelectorAll('.bc-milestone').forEach(function (m) {
+                    m.classList.toggle('reached', books.length >= parseInt(m.dataset.threshold, 10));
+                });
                 document.getElementById('bc-library-title').textContent =
                     'Our Growing French Library · ' + books.length + (books.length === 1 ? ' book' : ' books') + ' and counting';
 
