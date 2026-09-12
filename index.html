@@ -1148,37 +1148,61 @@
                 margin-bottom: 1rem;
             }
 
+            .bc-shelf-frame {
+                background: linear-gradient(90deg,#8a5b35,#b07a48 15%,#8a5b35 50%,#b07a48 85%,#7b4d2c);
+                border: 8px solid #684126;
+                border-radius: 14px;
+                padding: 20px 16px 0;
+                box-shadow: inset 0 0 0 2px #c99a63,0 10px 25px rgba(64,39,22,.25);
+            }
+
             .bc-shelf {
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 14px 10px;
+                flex-wrap: nowrap;
+                align-items: flex-end;
+                gap: 14px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                padding: 8px 8px 18px;
+                scroll-snap-type: x proximity;
+                scrollbar-color: #d2aa73 #6e452b;
+            }
+
+            .bc-shelf-board {
+                height: 16px;
+                background: linear-gradient(#c28b55,#704326);
+                margin: -8px -8px 0;
+                border-top: 2px solid #d4a36c;
+                box-shadow: 0 8px 9px rgba(44,24,10,.4);
+                border-radius: 0 0 6px 6px;
             }
 
             .bc-book {
-                width: 110px;
+                flex: 0 0 auto;
+                width: 120px;
                 text-align: center;
+                scroll-snap-align: start;
             }
 
             .bc-book img {
                 width: 100%;
-                height: 150px;
+                height: 160px;
                 object-fit: contain;
                 background: #f5eee0;
-                border-radius: 4px;
-                box-shadow: 3px 5px 7px rgba(44,25,12,.28);
+                border-radius: 3px 6px 2px 2px;
+                box-shadow: 4px 7px 9px rgba(0,0,0,.35);
             }
 
             .bc-book figcaption {
-                margin-top: .35rem;
+                margin-top: .4rem;
                 font-family: 'Cormorant Garamond',serif;
                 font-size: .72rem;
-                color: #173a60;
+                color: #fff4df;
                 line-height: 1.15;
+                text-shadow: 0 1px 2px #3d2112;
             }
 
             .bc-empty {
-                grid-column: 1/-1;
                 max-width: 520px;
                 margin: 0 auto;
                 text-align: center;
@@ -1212,17 +1236,18 @@
                 }
 
                 .bc-book {
-                    width: 92px;
+                    width: 100px;
                 }
 
                 .bc-book img {
-                    height: 128px;
+                    height: 135px;
                 }
             }
         </style>
         <style id="ninette-v30-paris-schedule">
-            /* V30 — Paris-themed schedule banner + real, flow-based HTML grid below it.
-   Only timetable data inside .v30-grid is intended to evolve. */
+            /* V31 — Paris-themed planner: real HTML data, dressed up with the original
+   pictograms + café/cat side panels. Horizontal scroll keeps the 6-day planner
+   look intact at any width instead of collapsing into a single column. */
             .v30-schedule {
                 max-width: 1536px;
                 margin: 0 auto;
@@ -1236,40 +1261,62 @@
                 height: auto;
             }
 
+            .v30-frame {
+                display: flex;
+                align-items: stretch;
+            }
+
+            .v30-side {
+                display: block;
+                flex: 0 0 auto;
+                width: clamp(60px,7.8vw,120px);
+                height: auto;
+                object-fit: cover;
+            }
+
+            .v30-scroll {
+                flex: 1;
+                min-width: 0;
+                overflow-x: auto;
+                scroll-snap-type: x proximity;
+            }
+
             .v30-grid {
                 display: grid;
-                grid-template-columns: repeat(6,1fr);
+                grid-template-columns: repeat(6,minmax(150px,1fr));
                 gap: 12px;
                 align-items: start;
-                padding: 20px clamp(12px,2.5vw,28px) 28px;
+                padding: 20px clamp(10px,2vw,24px) 28px;
+                min-width: 900px;
             }
 
             .v30-day {
                 min-width: 0;
                 display: flex;
                 flex-direction: column;
+                scroll-snap-align: start;
             }
 
             .v30-day-head {
                 background: #173f63;
                 color: #fff8e9;
                 border: 1px solid rgba(190,142,61,.65);
-                padding: .6vw .2vw;
-                border-radius: .45vw;
+                padding: 8px 4px;
+                border-radius: 8px;
                 text-align: center;
-                font: 500 clamp(10px,1.55vw,24px)/1 Georgia,"Times New Roman",serif;
+                font: 500 15px/1 Georgia,"Times New Roman",serif;
                 letter-spacing: .02em;
                 text-transform: uppercase;
-                margin-bottom: .55vw;
+                margin-bottom: 8px;
             }
 
             .v30-card {
-                border-radius: .65vw;
-                padding: .55vw .35vw .6vw;
-                margin-bottom: .55vw;
+                border-radius: 10px;
+                padding: 8px 6px 9px;
+                margin-bottom: 8px;
                 text-align: center;
                 border: 1px solid rgba(160,135,90,.30);
-                box-shadow: 0 .22vw .55vw rgba(80,60,40,.08);
+                box-shadow: 0 3px 8px rgba(80,60,40,.08);
                 color: #163957;
                 display: flex;
                 flex-direction: column;
@@ -1277,25 +1324,27 @@
             }
 
             .v30-time {
-                font: 700 clamp(7px,.88vw,14px)/1.1 Georgia,"Times New Roman",serif;
-                margin-bottom: .28vw;
+                font: 700 12px/1.1 Georgia,"Times New Roman",serif;
+                margin-bottom: 4px;
                 white-space: nowrap;
             }
 
             .v30-course {
-                font: 700 clamp(9px,1.15vw,18px)/1.06 Georgia,"Times New Roman",serif;
+                font: 700 15px/1.06 Georgia,"Times New Roman",serif;
             }
 
             .v30-level {
-                margin-top: .14vw;
-                font: 400 clamp(7px,.84vw,13px)/1.05 Georgia,"Times New Roman",serif;
+                margin-top: 2px;
+                font: 400 12px/1.05 Georgia,"Times New Roman",serif;
                 color: #4f4a40;
             }
 
             .v30-mark {
-                margin-top: .25vw;
-                font-size: clamp(7px,.9vw,14px);
-                color: #173f63;
+                margin: 6px auto 0;
+                width: 34px;
+                height: 34px;
+                object-fit: contain;
+                display: block;
             }
 
             .v30-immersion {
@@ -1328,50 +1377,25 @@
 
             .v30-note {
                 margin-top: auto;
-                padding: .5vw .25vw;
+                padding: 7px 3px;
                 text-align: center;
                 color: #294b69;
-                font: italic clamp(8px,.95vw,15px)/1.22 Georgia,"Times New Roman",serif;
+                font: italic 13px/1.22 Georgia,"Times New Roman",serif;
             }
 
-            @media(max-width: 980px) {
-                .v30-grid {
-                    grid-template-columns: repeat(3,1fr);
-                }
+            .v30-footer {
+                display: block;
+                width: 100%;
+                height: auto;
             }
 
             @media(max-width: 700px) {
+                .v30-side {
+                    display: none;
+                }
+
                 .v30-grid {
-                    grid-template-columns: 1fr;
-                    gap: 12px;
-                }
-
-                .v30-day-head {
-                    font-size: 18px;
-                    padding: 12px;
-                    border-radius: 8px
-                }
-
-                .v30-card {
-                    padding: 12px;
-                    border-radius: 10px;
-                    margin-bottom: 8px
-                }
-
-                .v30-time {
-                    font-size: 13px
-                }
-
-                .v30-course {
-                    font-size: 18px
-                }
-
-                .v30-level {
-                    font-size: 13px
-                }
-
-                .v30-note {
-                    font-size: 14px
+                    padding: 16px 12px 22px;
                 }
             }
         </style>
@@ -1526,7 +1550,10 @@
                     <div class="bc-progress"><div class="bc-progress-fill" id="bc-progress-fill" style="width:0%"></div></div>
                     <div class="bc-library">
                         <div class="bc-library-title" id="bc-library-title">Our Growing French Library</div>
-                        <div class="bc-shelf" id="bc-shelf"></div>
+                        <div class="bc-shelf-frame">
+                            <div class="bc-shelf" id="bc-shelf"></div>
+                            <div class="bc-shelf-board"></div>
+                        </div>
                     </div>
                 </div>
                 <div id="detail-immersion" class="detail-box" style="border:2px solid #1B3A5C">
@@ -1662,139 +1689,146 @@
         <!-- WEEKLY SCHEDULE — replaces Google Calendar -->
         <div id="schedule" class="v30-schedule" aria-label="Weekly Class Schedule">
             <img class="v30-banner" src="images/img-002-banner.webp" loading="lazy" decoding="async" alt="Weekly Class Schedule — French lessons for a brighter tomorrow">
-            <div class="v30-grid">
-                    <section class="v30-day" aria-label="Monday">
-                        <div class="v30-day-head">Monday</div>
-                        <div class="v30-card v30-immersion">
-                            <div class="v30-time">8:00 AM – 4:00 PM</div>
-                            <div class="v30-course">Early French Immersion</div>
-                            <div class="v30-level">Ages 4–10</div>
-                            <div class="v30-mark">❧</div>
-                        </div>
-                        <div class="v30-card v30-middle">
-                            <div class="v30-time">5:00 PM – 6:30 PM</div>
-                            <div class="v30-course">French II</div>
-                            <div class="v30-level">Middle School</div>
-                            <div class="v30-mark">⚜</div>
-                        </div>
-                        <div class="v30-card v30-bookclub">
-                            <div class="v30-time">6:30 PM – 7:30 PM</div>
-                            <div class="v30-course">Book Club</div>
-                            <div class="v30-mark">▤</div>
-                        </div>
-                    </section>
-                    <section class="v30-day" aria-label="Tuesday">
-                        <div class="v30-day-head">Tuesday</div>
-                        <div class="v30-card v30-high">
-                            <div class="v30-time">9:30 AM – 10:30 AM</div>
-                            <div class="v30-course">French I</div>
-                            <div class="v30-level">High School</div>
-                            <div class="v30-mark">⚜</div>
-                        </div>
-                        <div class="v30-card v30-story">
-                            <div class="v30-time">1:00 PM – 1:30 PM</div>
-                            <div class="v30-course">Book Club</div>
-                            <div class="v30-level">Storytime 2 to 4</div>
-                            <div class="v30-mark">✦</div>
-                        </div>
-                        <div class="v30-card v30-cp">
-                            <div class="v30-time">3:00 PM – 5:15 PM</div>
-                            <div class="v30-course">French CP</div>
-                            <div class="v30-level">Reading Method · Ages 5–6</div>
-                            <div class="v30-mark">⚜</div>
-                        </div>
-                        <div class="v30-card v30-elementary">
-                            <div class="v30-time">5:30 PM – 6:30 PM</div>
-                            <div class="v30-course">French II</div>
-                            <div class="v30-level">Elementary</div>
-                            <div class="v30-mark">⚜</div>
-                        </div>
-                        <div class="v30-card v30-bookclub">
-                            <div class="v30-time">6:30 PM – 7:30 PM</div>
-                            <div class="v30-course">Book Club</div>
-                            <div class="v30-mark">▤</div>
-                        </div>
-                    </section>
-                    <section class="v30-day" aria-label="Wednesday">
-                        <div class="v30-day-head">Wednesday</div>
-                        <div class="v30-card v30-immersion">
-                            <div class="v30-time">8:00 AM – 4:00 PM</div>
-                            <div class="v30-course">Early French Immersion</div>
-                            <div class="v30-level">Ages 4–10</div>
-                            <div class="v30-mark">❧</div>
-                        </div>
-                        <div class="v30-card v30-elementary">
-                            <div class="v30-time">4:00 PM – 6:00 PM</div>
-                            <div class="v30-course">French II</div>
-                            <div class="v30-level">Elementary</div>
-                            <div class="v30-mark">⚜</div>
-                        </div>
-                        <div class="v30-card v30-bookclub">
-                            <div class="v30-time">6:00 PM – 6:30 PM</div>
-                            <div class="v30-course">Book Club</div>
-                            <div class="v30-mark">▤</div>
-                        </div>
-                        <div class="v30-note">
-                            Des enfants curieux aux grands rêveurs,<br>le français est une aventure pour la vie.
-                        </div>
-                    </section>
-                    <section class="v30-day" aria-label="Thursday">
-                        <div class="v30-day-head">Thursday</div>
-                        <div class="v30-card v30-high">
-                            <div class="v30-time">9:30 AM – 10:30 AM</div>
-                            <div class="v30-course">French I</div>
-                            <div class="v30-level">High School</div>
-                            <div class="v30-mark">⚜</div>
-                        </div>
-                        <div class="v30-card v30-story">
-                            <div class="v30-time">1:00 PM – 1:30 PM</div>
-                            <div class="v30-course">Book Club</div>
-                            <div class="v30-level">Storytime 2 to 4</div>
-                            <div class="v30-mark">✦</div>
-                        </div>
-                        <div class="v30-card v30-cp">
-                            <div class="v30-time">3:00 PM – 5:15 PM</div>
-                            <div class="v30-course">French CP</div>
-                            <div class="v30-level">Reading Method · Ages 5–6</div>
-                            <div class="v30-mark">⚜</div>
-                        </div>
-                        <div class="v30-card v30-middle">
-                            <div class="v30-time">5:30 PM – 6:30 PM</div>
-                            <div class="v30-course">French I</div>
-                            <div class="v30-level">Middle School</div>
-                            <div class="v30-mark">⚜</div>
-                        </div>
-                        <div class="v30-card v30-bookclub">
-                            <div class="v30-time">6:30 PM – 7:30 PM</div>
-                            <div class="v30-course">Book Club</div>
-                            <div class="v30-mark">▤</div>
-                        </div>
-                    </section>
-                    <section class="v30-day" aria-label="Friday">
-                        <div class="v30-day-head">Friday</div>
-                        <div class="v30-card v30-immersion">
-                            <div class="v30-time">8:00 AM – 4:00 PM</div>
-                            <div class="v30-course">Early French Immersion</div>
-                            <div class="v30-level">Ages 4–10</div>
-                            <div class="v30-mark">❧</div>
-                        </div>
-                        <div class="v30-note">
-                            Culture · Confidence<br>Friendships for life.
-                        </div>
-                    </section>
-                    <section class="v30-day" aria-label="Saturday">
-                        <div class="v30-day-head">Saturday</div>
-                        <div class="v30-card v30-middle">
-                            <div class="v30-time">8:30 AM – 10:30 AM</div>
-                            <div class="v30-course">French II</div>
-                            <div class="v30-level">Middle School</div>
-                            <div class="v30-mark">⚜</div>
-                        </div>
-                        <div class="v30-note">
-                            Petits cours.<br>Grands horizons.
-                        </div>
-                    </section>
+            <div class="v30-frame">
+                <img class="v30-side" src="images/sched-border-left.png" loading="lazy" decoding="async" alt="">
+                <div class="v30-scroll">
+                    <div class="v30-grid">
+                        <section class="v30-day" aria-label="Monday">
+                            <div class="v30-day-head">Monday</div>
+                            <div class="v30-card v30-immersion">
+                                <div class="v30-time">8:00 AM – 4:00 PM</div>
+                                <div class="v30-course">Early French Immersion</div>
+                                <div class="v30-level">Ages 4–10</div>
+                                <img class="v30-mark" src="images/sched-tree.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-middle">
+                                <div class="v30-time">5:00 PM – 6:30 PM</div>
+                                <div class="v30-course">French II</div>
+                                <div class="v30-level">Middle School</div>
+                                <img class="v30-mark" src="images/sched-books.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-bookclub">
+                                <div class="v30-time">6:30 PM – 7:30 PM</div>
+                                <div class="v30-course">Book Club</div>
+                                <img class="v30-mark" src="images/sched-openbook.png" alt="" loading="lazy">
+                            </div>
+                        </section>
+                        <section class="v30-day" aria-label="Tuesday">
+                            <div class="v30-day-head">Tuesday</div>
+                            <div class="v30-card v30-high">
+                                <div class="v30-time">9:30 AM – 10:30 AM</div>
+                                <div class="v30-course">French I</div>
+                                <div class="v30-level">High School</div>
+                                <img class="v30-mark" src="images/sched-eiffel.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-story">
+                                <div class="v30-time">1:00 PM – 1:30 PM</div>
+                                <div class="v30-course">Book Club</div>
+                                <div class="v30-level">Storytime 2 to 4</div>
+                                <img class="v30-mark" src="images/sched-teddy.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-cp">
+                                <div class="v30-time">3:00 PM – 5:15 PM</div>
+                                <div class="v30-course">French CP</div>
+                                <div class="v30-level">Reading Method · Ages 5–6</div>
+                                <img class="v30-mark" src="images/sched-openbook.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-elementary">
+                                <div class="v30-time">5:30 PM – 6:30 PM</div>
+                                <div class="v30-course">French II</div>
+                                <div class="v30-level">Elementary</div>
+                                <img class="v30-mark" src="images/sched-chalk.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-bookclub">
+                                <div class="v30-time">6:30 PM – 7:30 PM</div>
+                                <div class="v30-course">Book Club</div>
+                                <img class="v30-mark" src="images/sched-books.png" alt="" loading="lazy">
+                            </div>
+                        </section>
+                        <section class="v30-day" aria-label="Wednesday">
+                            <div class="v30-day-head">Wednesday</div>
+                            <div class="v30-card v30-immersion">
+                                <div class="v30-time">8:00 AM – 4:00 PM</div>
+                                <div class="v30-course">Early French Immersion</div>
+                                <div class="v30-level">Ages 4–10</div>
+                                <img class="v30-mark" src="images/sched-tree.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-elementary">
+                                <div class="v30-time">4:00 PM – 6:00 PM</div>
+                                <div class="v30-course">French II</div>
+                                <div class="v30-level">Elementary</div>
+                                <img class="v30-mark" src="images/sched-globe.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-bookclub">
+                                <div class="v30-time">6:00 PM – 6:30 PM</div>
+                                <div class="v30-course">Book Club</div>
+                                <img class="v30-mark" src="images/sched-books.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-note">
+                                Des enfants curieux aux grands rêveurs,<br>le français est une aventure pour la vie.
+                            </div>
+                        </section>
+                        <section class="v30-day" aria-label="Thursday">
+                            <div class="v30-day-head">Thursday</div>
+                            <div class="v30-card v30-high">
+                                <div class="v30-time">9:30 AM – 10:30 AM</div>
+                                <div class="v30-course">French I</div>
+                                <div class="v30-level">High School</div>
+                                <img class="v30-mark" src="images/sched-eiffel.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-story">
+                                <div class="v30-time">1:00 PM – 1:30 PM</div>
+                                <div class="v30-course">Book Club</div>
+                                <div class="v30-level">Storytime 2 to 4</div>
+                                <img class="v30-mark" src="images/sched-teddy.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-cp">
+                                <div class="v30-time">3:00 PM – 5:15 PM</div>
+                                <div class="v30-course">French CP</div>
+                                <div class="v30-level">Reading Method · Ages 5–6</div>
+                                <img class="v30-mark" src="images/sched-openbook.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-middle">
+                                <div class="v30-time">5:30 PM – 6:30 PM</div>
+                                <div class="v30-course">French I</div>
+                                <div class="v30-level">Middle School</div>
+                                <img class="v30-mark" src="images/sched-chalk.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-card v30-bookclub">
+                                <div class="v30-time">6:30 PM – 7:30 PM</div>
+                                <div class="v30-course">Book Club</div>
+                                <img class="v30-mark" src="images/sched-books.png" alt="" loading="lazy">
+                            </div>
+                        </section>
+                        <section class="v30-day" aria-label="Friday">
+                            <div class="v30-day-head">Friday</div>
+                            <div class="v30-card v30-immersion">
+                                <div class="v30-time">8:00 AM – 4:00 PM</div>
+                                <div class="v30-course">Early French Immersion</div>
+                                <div class="v30-level">Ages 4–10</div>
+                                <img class="v30-mark" src="images/sched-tree.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-note">
+                                Culture · Confidence<br>Friendships for life.
+                            </div>
+                        </section>
+                        <section class="v30-day" aria-label="Saturday">
+                            <div class="v30-day-head">Saturday</div>
+                            <div class="v30-card v30-middle">
+                                <div class="v30-time">8:30 AM – 10:30 AM</div>
+                                <div class="v30-course">French II</div>
+                                <div class="v30-level">Middle School</div>
+                                <img class="v30-mark" src="images/sched-metro.png" alt="" loading="lazy">
+                            </div>
+                            <div class="v30-note">
+                                Petits cours.<br>Grands horizons.
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <img class="v30-side" src="images/sched-border-right.png" loading="lazy" decoding="async" alt="">
             </div>
+            <img class="v30-footer" src="images/sched-footer.png" loading="lazy" decoding="async" alt="">
         </div>
         <!-- CONTACT -->
         <div id="contact-section">
@@ -2050,7 +2084,15 @@
                     'Our Growing French Library · ' + books.length + (books.length === 1 ? ' book' : ' books') + ' and counting';
 
                 const shelf = document.getElementById('bc-shelf');
+                const frame = document.querySelector('.bc-shelf-frame');
                 if (books.length === 0) {
+                    frame.style.background = 'none';
+                    frame.style.border = 'none';
+                    frame.style.boxShadow = 'none';
+                    frame.style.padding = '0';
+                    shelf.style.display = 'block';
+                    shelf.style.overflow = 'visible';
+                    document.querySelector('.bc-shelf-board').style.display = 'none';
                     shelf.innerHTML =
                         '<div class="bc-empty">' +
                         '<p>This level\'s reading list is being finalized. 🇺🇸 Contact Ninette to be notified when it launches.<br>' +
@@ -2058,6 +2100,13 @@
                         '<a href="mailto:arianesclass@gmail.com?subject=Book Club — ' + level.label + '">✉ Ask about this level · Se renseigner</a>' +
                         '</div>';
                 } else {
+                    frame.style.background = '';
+                    frame.style.border = '';
+                    frame.style.boxShadow = '';
+                    frame.style.padding = '';
+                    shelf.style.display = '';
+                    shelf.style.overflow = '';
+                    document.querySelector('.bc-shelf-board').style.display = '';
                     shelf.innerHTML = books.map(function (b) {
                         return '<figure class="bc-book" title="' + b.title.replace(/"/g, '&quot;') + '">' +
                             '<img loading="lazy" decoding="async" src="' + b.src + '" alt="' + b.title.replace(/"/g, '&quot;') + '">' +
