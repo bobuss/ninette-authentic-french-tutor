@@ -1209,7 +1209,31 @@
                 margin-bottom: 1rem;
             }
 
+            .bc-shelf-row {
+                display: flex;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .bc-side {
+                display: block;
+                flex: 0 0 auto;
+                width: clamp(50px,7vw,110px);
+                height: auto;
+                object-fit: cover;
+            }
+
+            .bc-bottom-scene {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin-top: 12px;
+                border-radius: 10px;
+            }
+
             .bc-shelf-frame {
+                flex: 1;
+                min-width: 0;
                 background: linear-gradient(90deg,#8a5b35,#b07a48 15%,#8a5b35 50%,#b07a48 85%,#7b4d2c);
                 border: 8px solid #684126;
                 border-radius: 14px;
@@ -1302,6 +1326,10 @@
 
                 .bc-book img {
                     height: 135px;
+                }
+
+                .bc-side {
+                    display: none;
                 }
             }
         </style>
@@ -1633,10 +1661,15 @@
                     </div>
                     <div class="bc-library">
                         <div class="bc-library-title" id="bc-library-title">Our Growing French Library</div>
-                        <div class="bc-shelf-frame">
-                            <div class="bc-shelf" id="bc-shelf"></div>
-                            <div class="bc-shelf-board"></div>
+                        <div class="bc-shelf-row">
+                            <img class="bc-side" src="images/bc-side-left.webp" loading="lazy" decoding="async" alt="">
+                            <div class="bc-shelf-frame">
+                                <div class="bc-shelf" id="bc-shelf"></div>
+                                <div class="bc-shelf-board"></div>
+                            </div>
+                            <img class="bc-side" src="images/bc-side-right.webp" loading="lazy" decoding="async" alt="">
                         </div>
+                        <img class="bc-bottom-scene" src="images/bc-bottom-scene.webp" loading="lazy" decoding="async" alt="A cozy reading corner with an armchair, a cat, and a cup of tea — &quot;A child who reads in French discovers a wider, kinder, more beautiful world.&quot; — Ninette">
                     </div>
                 </div>
                 <div id="detail-immersion" class="detail-box" style="border:2px solid #1B3A5C">
