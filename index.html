@@ -1095,6 +1095,11 @@
                 object-fit: cover;
             }
 
+            .bc-shelf-band-img {
+                height: 100%;
+                object-fit: cover;
+            }
+
             .bc-cornice {
                 margin-top: -1px;
                 margin-bottom: -1px;
@@ -1192,6 +1197,8 @@
                 position: relative;
                 line-height: 0;
                 background: #241507;
+                aspect-ratio: 842 / 317;
+                overflow: hidden;
             }
 
             .bc-shelf {
@@ -1201,14 +1208,12 @@
                 top: 2.2%;
                 bottom: 8.7%;
                 display: flex;
-                flex-wrap: nowrap;
-                align-items: flex-end;
-                gap: 1.1%;
+                flex-direction: column;
+                gap: 3%;
                 overflow-x: auto;
                 overflow-y: hidden;
                 padding: 0 .5% .3%;
                 line-height: normal;
-                scroll-snap-type: x proximity;
                 scrollbar-width: thin;
                 scrollbar-color: #a9803f rgba(0,0,0,.35);
             }
@@ -1219,15 +1224,44 @@
                 overflow: hidden;
             }
 
+            .bc-shelf-row {
+                min-height: 0;
+                display: flex;
+                flex: 1 1 0;
+                align-items: flex-end;
+                gap: 1.1%;
+                width: max-content;
+                overflow: visible;
+            }
+
             .bc-book {
                 flex: 0 0 auto;
                 margin: 0;
-                width: 60%;
+                height: 100%;
+                aspect-ratio: 3 / 4;
                 scroll-snap-align: start;
             }
 
+            .bc-book.is-compact {
+                height: 72%;
+            }
+
+            .bc-book.is-tall {
+                height: 203%;
+                align-self: flex-start;
+                position: relative;
+                z-index: 1;
+            }
+
+            .bc-book.is-spacer {
+                visibility: hidden;
+                pointer-events: none;
+            }
+
             .bc-book img {
-                width: 60%;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
                 display: block;
                 border-radius: 2px 4px 2px 2px;
                 box-shadow: 3px 6px 11px rgba(0,0,0,.6);
@@ -2093,11 +2127,31 @@
                         '<a href="mailto:arianesclass@gmail.com?subject=Book Club — ' + level.label + '">✉ Ask about this level · Se renseigner</a>' +
                         '</div>';
                 } else {
-                    shelf.innerHTML = books.map(function (b) {
+                    shelf.innerHTML = [0, 1].map(function (rowIndex) {
+                        const rowBooks = books.filter(function (_, bookIndex) {
+                            return bookIndex % 2 === rowIndex;
+                        });
+                        return '<div class="bc-shelf-row">' + rowBooks.map(function (b, rowBookIndex) {
+                        const bookIndex = rowBookIndex * 2 + rowIndex;
+                        const isTall = bookIndex % 8 === 0;
+                        const isTallSpacer = rowIndex === 1 && bookIndex > 0 && (bookIndex - 1) % 8 === 0;
+                        const sizeClass = isTall || isTallSpacer ? ' is-tall' : (bookIndex % 3 === 0 ? ' is-compact' : '');
+                        if (isTallSpacer) {
+                            return '<figure class="bc-book is-spacer' + sizeClass + '" aria-hidden="true"></figure>';
+                        }
                         const coverSrc = b.src.replace(/^images\//, 'images/book-covers/').replace(/\.jpg$/i, '.webp');
-                        return '<figure class="bc-book" title="' + b.title.replace(/"/g, '&quot;') + '">' +
+                        return '<figure class="bc-book' + sizeClass + '" title="' + b.title.replace(/"/g, '&quot;') + '">' +
                             '<img loading="lazy" decoding="async" src="' + coverSrc + '" alt="' + b.title.replace(/"/g, '&quot;') + '"></figure>';
+                        }).join('') + '</div>';
                     }).join('');
+
+                    const rows = Array.from(shelf.querySelectorAll('.bc-shelf-row'));
+                    const widestRow = Math.max.apply(null, rows.map(function (row) {
+                        return row.scrollWidth;
+                    }));
+                    rows.forEach(function (row) {
+                        row.style.minWidth = widestRow + 'px';
+                    });
                 }
 
                 document.querySelectorAll('.bc-tab').forEach(function (btn) {
