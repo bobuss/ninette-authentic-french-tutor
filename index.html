@@ -1234,6 +1234,7 @@
             .bc-shelf-frame {
                 flex: 1;
                 min-width: 0;
+                min-height: 238px;
                 background: linear-gradient(90deg,#8a5b35,#b07a48 15%,#8a5b35 50%,#b07a48 85%,#7b4d2c);
                 border: 8px solid #684126;
                 border-radius: 14px;
@@ -1249,8 +1250,14 @@
                 overflow-x: auto;
                 overflow-y: hidden;
                 padding: 8px 8px 18px;
+                height: 186px;
                 scroll-snap-type: x proximity;
                 scrollbar-color: #d2aa73 #6e452b;
+            }
+
+            .bc-shelf.is-empty {
+                align-items: center;
+                justify-content: center;
             }
 
             .bc-shelf-board {
@@ -1272,19 +1279,9 @@
             .bc-book img {
                 width: 100%;
                 height: 160px;
-                object-fit: contain;
-                background: #f5eee0;
+                object-fit: cover;
                 border-radius: 3px 6px 2px 2px;
                 box-shadow: 4px 7px 9px rgba(0,0,0,.35);
-            }
-
-            .bc-book figcaption {
-                margin-top: .4rem;
-                font-family: 'Cormorant Garamond',serif;
-                font-size: .72rem;
-                color: #fff4df;
-                line-height: 1.15;
-                text-shadow: 0 1px 2px #3d2112;
             }
 
             .bc-empty {
@@ -1326,6 +1323,14 @@
 
                 .bc-book img {
                     height: 135px;
+                }
+
+                .bc-shelf-frame {
+                    min-height: 213px;
+                }
+
+                .bc-shelf {
+                    height: 161px;
                 }
 
                 .bc-side {
@@ -2203,15 +2208,8 @@
                     'Our Growing French Library · ' + books.length + (books.length === 1 ? ' book' : ' books') + ' and counting';
 
                 const shelf = document.getElementById('bc-shelf');
-                const frame = document.querySelector('.bc-shelf-frame');
+                shelf.classList.toggle('is-empty', books.length === 0);
                 if (books.length === 0) {
-                    frame.style.background = 'none';
-                    frame.style.border = 'none';
-                    frame.style.boxShadow = 'none';
-                    frame.style.padding = '0';
-                    shelf.style.display = 'block';
-                    shelf.style.overflow = 'visible';
-                    document.querySelector('.bc-shelf-board').style.display = 'none';
                     shelf.innerHTML =
                         '<div class="bc-empty">' +
                         '<p>This level\'s reading list is being finalized. 🇺🇸 Contact Ninette to be notified when it launches.<br>' +
@@ -2219,17 +2217,10 @@
                         '<a href="mailto:arianesclass@gmail.com?subject=Book Club — ' + level.label + '">✉ Ask about this level · Se renseigner</a>' +
                         '</div>';
                 } else {
-                    frame.style.background = '';
-                    frame.style.border = '';
-                    frame.style.boxShadow = '';
-                    frame.style.padding = '';
-                    shelf.style.display = '';
-                    shelf.style.overflow = '';
-                    document.querySelector('.bc-shelf-board').style.display = '';
                     shelf.innerHTML = books.map(function (b) {
+                        const coverSrc = b.src.replace(/^images\//, 'images/book-covers/').replace(/\.jpg$/i, '.webp');
                         return '<figure class="bc-book" title="' + b.title.replace(/"/g, '&quot;') + '">' +
-                            '<img loading="lazy" decoding="async" src="' + b.src + '" alt="' + b.title.replace(/"/g, '&quot;') + '">' +
-                            '<figcaption>' + b.title + '</figcaption></figure>';
+                            '<img loading="lazy" decoding="async" src="' + coverSrc + '" alt="' + b.title.replace(/"/g, '&quot;') + '"></figure>';
                     }).join('');
                 }
 
