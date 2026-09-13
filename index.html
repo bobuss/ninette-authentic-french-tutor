@@ -1076,6 +1076,8 @@
             .bc-top {
                 position: relative;
                 line-height: 0;
+                aspect-ratio: 842 / 268;
+                overflow: hidden;
             }
 
             .bc-top-img,
@@ -1086,6 +1088,11 @@
                 width: 100%;
                 height: auto;
                 margin: 0;
+            }
+
+            .bc-top-img {
+                height: 100%;
+                object-fit: cover;
             }
 
             .bc-cornice {
@@ -1137,8 +1144,8 @@
                 position: absolute;
                 left: 15.4%;
                 right: 15.1%;
-                top: 20.9%;
-                height: 19.4%;
+                top: 29%;
+                height: 14%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -1254,6 +1261,32 @@
             }
 
             @media(max-width: 480px) {
+                .bc-tabs {
+                    top: .8%;
+                    height: 11.5%;
+                }
+
+                .bc-tab {
+                    font-size: .44rem;
+                    line-height: .95;
+                    padding: 1px;
+                    border-radius: 5px;
+                }
+
+                .bc-counter {
+                    top: 25%;
+                    height: 14%;
+                }
+
+                .bc-count {
+                    font-size: .82rem;
+                }
+
+                .bc-progress {
+                    margin-top: 2%;
+                    height: 5px;
+                }
+
                 .bc-count-label {
                     letter-spacing: 0;
                 }
