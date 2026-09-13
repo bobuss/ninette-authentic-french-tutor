@@ -1074,40 +1074,12 @@
                 height: auto;
             }
 
-            .bc-tabs {
-                display: grid;
-                grid-template-columns: repeat(5,minmax(0,1fr));
-                gap: .4rem;
-                padding: .7rem clamp(12px,3vw,34px);
-                background: #aa9470;
-                border-top: 1px solid #8f7a58;
+            .bc-top {
+                position: relative;
+                line-height: 0;
             }
 
-            .bc-tab {
-                font-family: 'Cormorant Garamond',serif;
-                font-size: .85rem;
-                line-height: 1.2;
-                padding: .7rem .4rem;
-                border-radius: 10px;
-                border: 1px solid #c7ae7d;
-                background: #f8f1e3;
-                color: #173a60;
-                cursor: pointer;
-                transition: .15s;
-            }
-
-            .bc-tab:hover {
-                background: #f0e6cd;
-            }
-
-            .bc-tab.active {
-                background: #173a60;
-                color: #fff;
-                border-color: #b48739;
-                box-shadow: inset 0 -4px 0 #b48739;
-            }
-
-            .bc-medals,
+            .bc-top-img,
             .bc-cornice,
             .bc-bottom,
             .bc-shelf-band-img {
@@ -1117,36 +1089,89 @@
                 margin: 0;
             }
 
-            .bc-counter {
-                background: #aa9470;
+            .bc-cornice {
+                margin-top: -1px;
+                margin-bottom: -1px;
+            }
+
+            .bc-tabs {
+                position: absolute;
+                left: 13.7%;
+                right: 4.3%;
+                top: 2.8%;
+                height: 23.6%;
+                display: grid;
+                grid-template-columns: repeat(5,minmax(0,1fr));
+                gap: .7%;
+                line-height: normal;
+            }
+
+            .bc-tab {
+                font-family: 'Cormorant Garamond',serif;
+                font-size: clamp(.5rem,1.25vw,.82rem);
+                line-height: 1.06;
+                padding: 2px 3px;
+                border-radius: 7px;
+                border: 1px solid #b79a63;
+                background: rgba(248,241,227,.92);
+                color: #173a60;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 text-align: center;
-                padding: .7rem clamp(16px,4vw,42px) .9rem;
-                border-bottom: 1px solid #8f7a58;
+                transition: .15s;
+            }
+
+            .bc-tab:hover {
+                background: #fff;
+            }
+
+            .bc-tab.active {
+                background: #173a60;
+                color: #fff;
+                border-color: #b48739;
+                box-shadow: inset 0 -3px 0 #b48739;
+            }
+
+            .bc-counter {
+                position: absolute;
+                left: 14.6%;
+                right: 14.1%;
+                top: 26.7%;
+                height: 22.8%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                line-height: normal;
             }
 
             .bc-count {
                 font-family: 'Cormorant Garamond',serif;
-                font-size: 1.5rem;
+                font-size: clamp(.9rem,2.4vw,1.6rem);
                 font-weight: 700;
                 color: #22364e;
-                letter-spacing: .02em;
+                letter-spacing: .01em;
+                white-space: nowrap;
             }
 
             .bc-count b {
                 color: #6f4a1c;
-                font-size: 2.1rem;
+                font-size: 1.35em;
             }
 
             .bc-count-label {
-                font-size: 1.05rem;
+                font-size: .72em;
+                letter-spacing: .04em;
             }
 
             .bc-progress {
-                max-width: 560px;
-                margin: .5rem auto 0;
-                height: 11px;
-                background: rgba(52,34,14,.3);
-                border: 1px solid rgba(52,34,14,.5);
+                width: min(74%,360px);
+                margin: 3.5% auto 0;
+                height: clamp(5px,1.4vw,10px);
+                background: rgba(52,34,14,.26);
+                border: 1px solid rgba(52,34,14,.42);
                 border-radius: 99px;
                 overflow: hidden;
             }
@@ -1155,15 +1180,6 @@
                 height: 100%;
                 background: linear-gradient(90deg,#8a5a1f,#e0bd72);
                 transition: width .3s ease;
-            }
-
-            .bc-medals {
-                margin-top: -1px;
-                margin-bottom: -1px;
-            }
-
-            .bc-cornice {
-                margin-bottom: -1px;
             }
 
             .bc-shelf-band {
@@ -1178,6 +1194,7 @@
                 right: 17%;
                 top: 5%;
                 bottom: 11%;
+                background: #37220f;
                 display: flex;
                 flex-wrap: nowrap;
                 align-items: flex-end;
@@ -1241,21 +1258,9 @@
                 text-decoration: underline;
             }
 
-            @media(max-width: 640px) {
-                .bc-tabs {
-                    grid-template-columns: repeat(2,minmax(0,1fr));
-                }
-
-                .bc-count {
-                    font-size: 1.15rem;
-                }
-
-                .bc-count b {
-                    font-size: 1.5rem;
-                }
-
+            @media(max-width: 480px) {
                 .bc-count-label {
-                    font-size: .8rem;
+                    letter-spacing: 0;
                 }
             }
         </style>
@@ -1554,18 +1559,20 @@
                 </div>
                 <div id="bookclub">
                     <img class="bc-banner" loading="lazy" decoding="async" src="images/img-008-banner.webp" alt="Ninette Authentic French Tutor · French Book Club · The Great Challenge of 100 Books">
-                    <div class="bc-tabs" role="tablist" aria-label="Book Club levels">
-                        <button type="button" class="bc-tab" data-level="ages-2-5" role="tab">Ages 2–5</button>
-                        <button type="button" class="bc-tab" data-level="k-2" role="tab">Kindergarten – 2nd Grade</button>
-                        <button type="button" class="bc-tab" data-level="3-5" role="tab">3rd – 5th Grade</button>
-                        <button type="button" class="bc-tab" data-level="middle-school" role="tab">6th – 8th Grade · Middle School</button>
-                        <button type="button" class="bc-tab" data-level="high-school" role="tab">9th – 12th Grade · High School</button>
+                    <div class="bc-top">
+                        <img class="bc-top-img" loading="lazy" decoding="async" src="images/bc-top.webp" alt="Book Club levels, reading progress and milestone medals on the château library wall">
+                        <div class="bc-tabs" role="tablist" aria-label="Book Club levels">
+                            <button type="button" class="bc-tab" data-level="ages-2-5" role="tab">Ages 2–5</button>
+                            <button type="button" class="bc-tab" data-level="k-2" role="tab">Kindergarten – 2nd Grade</button>
+                            <button type="button" class="bc-tab" data-level="3-5" role="tab">3rd – 5th Grade</button>
+                            <button type="button" class="bc-tab" data-level="middle-school" role="tab">6th – 8th Grade · Middle School</button>
+                            <button type="button" class="bc-tab" data-level="high-school" role="tab">9th – 12th Grade · High School</button>
+                        </div>
+                        <div class="bc-counter">
+                            <div class="bc-count"><b id="bc-count-n">0</b> <span class="bc-count-label">/ 100 BOOKS DISCOVERED</span></div>
+                            <div class="bc-progress"><div class="bc-progress-fill" id="bc-progress-fill" style="width:0%"></div></div>
+                        </div>
                     </div>
-                    <div class="bc-counter">
-                        <div class="bc-count"><b id="bc-count-n">0</b> <span class="bc-count-label">/ 100 BOOKS DISCOVERED</span></div>
-                        <div class="bc-progress"><div class="bc-progress-fill" id="bc-progress-fill" style="width:0%"></div></div>
-                    </div>
-                    <img class="bc-medals" loading="lazy" decoding="async" src="images/bc-medals.webp" alt="Milestones: Little Reader (25), Story Explorer (50), Great Reader (75), Book Club Champion (100)">
                     <img class="bc-cornice" loading="lazy" decoding="async" src="images/bc-cornice.webp" alt="Our Growing French Library">
                     <div class="bc-shelf-band">
                         <img class="bc-shelf-band-img" src="images/bc-shelf-band.webp" loading="lazy" decoding="async" alt="Wooden château library cabinet">
