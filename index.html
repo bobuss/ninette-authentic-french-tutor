@@ -1467,12 +1467,45 @@
             }
 
             @media(max-width: 700px) {
+                .v30-schedule {
+                    aspect-ratio: auto;
+                    padding-bottom: 12px;
+                }
+
+                .v30-background {
+                    height: clamp(132px,34vw,238px);
+                    object-fit: cover;
+                    object-position: center top;
+                }
+
                 .v30-frame {
-                    inset: 34.1% 7.8% 8.5%;
+                    position: relative;
+                    inset: auto;
+                    margin: -8px 12px 0;
+                    border: 1px solid rgba(160,135,90,.38);
+                    border-radius: 10px;
+                    background: #f5eddd;
+                    box-shadow: 0 4px 12px rgba(80,60,40,.12);
+                }
+
+                .v30-scroll {
+                    overflow-x: auto;
+                    overflow-y: hidden;
                 }
 
                 .v30-grid {
+                    display: flex;
+                    gap: 12px;
                     padding: 10px;
+                    min-width: max-content;
+                }
+
+                .v30-day {
+                    flex: 0 0 min(55vw,240px);
+                }
+
+                .v30-mark {
+                    display: none;
                 }
             }
         </style>
