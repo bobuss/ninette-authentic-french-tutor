@@ -152,6 +152,10 @@
         "src": "images/k-2/ali-baba-et-les-40-voleurs--1XnQMa83.webp"
       },
       {
+        "title": "Apollo et les planètes",
+        "src": "images/k-2/apollo-et-les-plan-tes--10NZfBJH.webp"
+      },
+      {
         "title": "Barbe-Bleue",
         "src": "images/k-2/barbe-bleue--1iQnnzZK.webp"
       },
@@ -164,12 +168,20 @@
         "src": "images/k-2/cl-ment-aplati--1DVA62Lv.webp"
       },
       {
+        "title": "Coucou, c'est moi Agathe !",
+        "src": "images/k-2/coucou-c-est-moi-agathe--1Q8QjCRC.webp"
+      },
+      {
         "title": "Des rébus pour papa !",
         "src": "images/k-2/des-r-bus-pour-papa--1KtWuFXG.webp"
       },
       {
         "title": "Doucette",
         "src": "images/k-2/doucette--12NtclFa.webp"
+      },
+      {
+        "title": "Il est bizarre Léonard",
+        "src": "images/k-2/il-est-bizarre-leonard--1dNgp6ir.webp"
       },
       {
         "title": "La Belle au bois dormant",
@@ -180,12 +192,28 @@
         "src": "images/k-2/la-cigale-et-la-fourmi-le-loup-et-l-agneau--1jN_9GBe.webp"
       },
       {
+        "title": "La fille qui ne voulait pas se marier",
+        "src": "images/k-2/la-fille-qui-ne-voulait-pas-se-marier--1bQgLE2I.webp"
+      },
+      {
+        "title": "La grenouille à grande bouche",
+        "src": "images/k-2/la-grenouille-grande-bouche--1rWV2Jle.webp"
+      },
+      {
+        "title": "La petite fille aux allumettes",
+        "src": "images/k-2/la-petite-fille-aux-allumettes--1aQro8te.webp"
+      },
+      {
         "title": "Le bonhomme de pain d'épice",
         "src": "images/k-2/le-bonhomme-de-pain-d-pice--1ED__3_x.webp"
       },
       {
         "title": "Le bonhomme qui souffle le vent",
         "src": "images/k-2/le-bonhomme-qui-souffle-le-vent--1H7rnlJi.webp"
+      },
+      {
+        "title": "Le beau ver dodu",
+        "src": "images/k-2/le-cer-dodu--16sXOylp.webp"
       },
       {
         "title": "Le Petit Chaperon rouge",
@@ -204,12 +232,24 @@
         "src": "images/k-2/les-musiciens-de-br-me--135KNGCA.webp"
       },
       {
+        "title": "Moi, j'adore, maman déteste",
+        "src": "images/k-2/moi-j-adore-maman-deteste--179Y8P9Y.webp"
+      },
+      {
         "title": "Mon papy voit la vie en jaune",
         "src": "images/k-2/mon-papy-voit-la-vie-en-jaune--1OUY-YCu.webp"
       },
       {
+        "title": "Pierre fait des farces",
+        "src": "images/k-2/pierre-fait-des-farces--1hHQKVJX.webp"
+      },
+      {
         "title": "Que la fête commence !",
         "src": "images/k-2/que-la-f-te-commence--1mJTKVFL.webp"
+      },
+      {
+        "title": "Le Petit Poucet",
+        "src": "images/k-2/scanned-20260914-1409--1oSEgapG.webp"
       },
       {
         "title": "Simbad le marin",
@@ -221,16 +261,36 @@
     "label": "3rd – 5th Grade",
     "books": [
       {
+        "title": "Alice au pays des merveilles",
+        "src": "images/3-5/alice-au-pays-des-merveilles--1y5QbRSD.webp"
+      },
+      {
+        "title": "Chouchou au Far West",
+        "src": "images/3-5/chouchou-au-far-west--1L1zoUB8.webp"
+      },
+      {
         "title": "Contes des quatre vents",
         "src": "images/3-5/contes-des-quatre-vents--1kArwT1h.webp"
+      },
+      {
+        "title": "Julie la flemme",
+        "src": "images/3-5/julie-la-flemme--1FW1Ys4o.webp"
       },
       {
         "title": "Le Tour du monde en 80 jours",
         "src": "images/3-5/le-tour-du-monde-en-80-jours--1OXvLMFh.webp"
       },
       {
+        "title": "Beaux Contes d'Andersen",
+        "src": "images/3-5/les-plus-beaux-contes-d-andersen--1IPRMHhs.webp"
+      },
+      {
         "title": "Les quatre musiciens de Brême",
         "src": "images/3-5/les-quatre-musiciens-de-br-me--1ocNjrUs.webp"
+      },
+      {
+        "title": "Riquet à la houppe",
+        "src": "images/3-5/riquet-la-houpe--1dvR8IpO.webp"
       },
       {
         "title": "Un coquelicot pour se souvenir",
@@ -252,6 +312,10 @@
       {
         "title": "L'Appel de la forêt",
         "src": "images/middle-school/l-appel-de-la-for-t--1a7mYZQ3.webp"
+      },
+      {
+        "title": "L'enfant qui inventait des oiseaux",
+        "src": "images/middle-school/l-enfant-qui-inventait-des-oiseaux--1axZGRIz.webp"
       },
       {
         "title": "L'Épopée du Roi Singe",
@@ -282,6 +346,14 @@
   "high-school": {
     "label": "9th – 12th Grade · High School",
     "books": [
+      {
+        "title": "En canot sur les chemins d'eau du roi",
+        "src": "images/high-school/en-canot-sur-les-chemins-d-eau-du-roi--1i_60hML.webp"
+      },
+      {
+        "title": "Les cow-boys : le Far West",
+        "src": "images/high-school/les-cow-boys-le-far-west--1xoyxWHi.webp"
+      },
       {
         "title": "Les Nouveaux Contes de la Louve",
         "src": "images/high-school/les-nouveaux-contes-de-la-louve--10sW6f4g.webp"

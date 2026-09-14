@@ -1120,29 +1120,45 @@
             .bc-tab {
                 font-family: 'Cormorant Garamond',serif;
                 font-size: clamp(.5rem,1.25vw,.82rem);
+                font-weight: 700;
                 line-height: 1.06;
                 padding: 2px 3px;
                 border-radius: 7px;
-                border: 1px solid #b79a63;
-                background: rgba(248,241,227,.92);
+                border: 1px solid #8a642c;
+                background: #fffaf0;
                 color: #173a60;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                transition: .15s;
+                box-shadow: inset 0 1px 0 rgba(255,255,255,.95),0 2px 0 #8a642c,0 3px 5px rgba(58,37,12,.28);
+                transition: background .15s ease,border-color .15s ease,box-shadow .15s ease,transform .15s ease;
             }
 
-            .bc-tab:hover {
+            .bc-tab:hover,
+            .bc-tab:focus-visible {
                 background: #fff;
+                border-color: #5f4018;
+                box-shadow: inset 0 1px 0 #fff,0 3px 0 #6f4a1c,0 5px 8px rgba(58,37,12,.32);
+                transform: translateY(-1px);
+            }
+
+            .bc-tab:focus-visible {
+                outline: 2px solid #173a60;
+                outline-offset: 2px;
+            }
+
+            .bc-tab:active {
+                box-shadow: inset 0 2px 4px rgba(31,19,8,.32),0 1px 0 #6f4a1c;
+                transform: translateY(1px);
             }
 
             .bc-tab.active {
                 background: #173a60;
                 color: #fff;
-                border-color: #b48739;
-                box-shadow: inset 0 -3px 0 #b48739;
+                border-color: #6f4a1c;
+                box-shadow: inset 0 1px 0 rgba(255,255,255,.16),inset 0 -3px 0 #b48739,0 2px 0 #6f4a1c,0 3px 5px rgba(58,37,12,.35);
             }
 
             .bc-counter {

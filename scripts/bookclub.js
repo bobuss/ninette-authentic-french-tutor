@@ -76,10 +76,10 @@ function ninetteRenderBookLevel(levelKey) {
                 const bookIndex = rowBookIndex * 2 + rowIndex;
                 const isTall = bookIndex % 8 === 0;
                 const isTallSpacer = rowIndex === 1 && bookIndex > 0 && (bookIndex - 1) % 8 === 0;
-                const sizeClass = isTall || isTallSpacer ? " is-tall" : (bookIndex % 3 === 0 ? " is-compact" : "");
-                if (isTallSpacer) return '<figure class="bc-book is-spacer' + sizeClass + '" aria-hidden="true"></figure>';
+                const sizeClass = isTall ? " is-tall" : (bookIndex % 3 === 0 ? " is-compact" : "");
+                const spacer = isTallSpacer ? '<figure class="bc-book is-spacer is-tall" aria-hidden="true"></figure>' : "";
                 const title = escapeHtml(book.title);
-                return '<figure class="bc-book' + sizeClass + '" title="' + title + '">' +
+                return spacer + '<figure class="bc-book' + sizeClass + '" title="' + title + '">' +
                     '<img loading="lazy" decoding="async" src="' + book.src.replace(/^images\//, "images/book-covers/") + '" alt="' + title + '"></figure>';
             }).join("") + "</div>";
         }).join("");
