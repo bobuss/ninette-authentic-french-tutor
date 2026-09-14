@@ -1218,6 +1218,40 @@
                 scrollbar-color: #a9803f rgba(0,0,0,.35);
             }
 
+            .bc-scrollbar {
+                position: absolute;
+                left: 18.9%;
+                right: 18.7%;
+                bottom: 2.5%;
+                height: 5px;
+                border-radius: 99px;
+                background: rgba(20,10,4,.62);
+                box-shadow: inset 0 1px 1px rgba(255,235,188,.25);
+                cursor: ew-resize;
+            }
+
+            .bc-scrollbar[hidden] {
+                display: none;
+            }
+
+            .bc-scroll-thumb {
+                position: absolute;
+                top: -3px;
+                bottom: -3px;
+                left: 0;
+                min-width: 32px;
+                border: 1px solid #e8c77c;
+                border-radius: 99px;
+                background: repeating-linear-gradient(90deg,#bd8535 0 2px,#f0d18b 2px 4px);
+                box-shadow: 0 1px 3px rgba(0,0,0,.7);
+                cursor: grab;
+                touch-action: none;
+            }
+
+            .bc-scroll-thumb:active {
+                cursor: grabbing;
+            }
+
             .bc-shelf.is-empty {
                 align-items: center;
                 justify-content: center;
@@ -1667,6 +1701,9 @@
                     <div class="bc-shelf-band">
                         <img class="bc-shelf-band-img" src="images/bc-shelf-band.webp" loading="lazy" decoding="async" alt="Wooden château library cabinet">
                         <div class="bc-shelf" id="bc-shelf"></div>
+                        <div class="bc-scrollbar" id="bc-scrollbar" hidden aria-hidden="true">
+                            <div class="bc-scroll-thumb" id="bc-scroll-thumb"></div>
+                        </div>
                     </div>
                     <img class="bc-bottom" loading="lazy" decoding="async" src="images/bc-bottom.webp" alt="A cozy reading corner with an armchair, a cat, and a cup of tea — &quot;A child who reads in French discovers a wider, kinder, more beautiful world.&quot; — Ninette">
                 </div>
@@ -2144,6 +2181,51 @@
     }
 };
 
+            function ninetteUpdateShelfScrollbar() {
+                const shelf = document.getElementById('bc-shelf');
+                const scrollbar = document.getElementById('bc-scrollbar');
+                const thumb = document.getElementById('bc-scroll-thumb');
+                const overflow = shelf.scrollWidth - shelf.clientWidth;
+                scrollbar.hidden = overflow <= 0;
+                if (overflow <= 0) return;
+
+                const trackWidth = scrollbar.clientWidth;
+                const thumbWidth = Math.max(32, trackWidth * shelf.clientWidth / shelf.scrollWidth);
+                const travel = trackWidth - thumbWidth;
+                thumb.style.width = thumbWidth + 'px';
+                thumb.style.transform = 'translateX(' + (travel * shelf.scrollLeft / overflow) + 'px)';
+            }
+
+            function ninetteEnableShelfGrip() {
+                const shelf = document.getElementById('bc-shelf');
+                const scrollbar = document.getElementById('bc-scrollbar');
+                const thumb = document.getElementById('bc-scroll-thumb');
+                let dragStartX = 0;
+                let dragStartScroll = 0;
+                let activePointerId = null;
+
+                shelf.addEventListener('scroll', ninetteUpdateShelfScrollbar, { passive: true });
+                shelf.addEventListener('load', ninetteUpdateShelfScrollbar, true);
+                window.addEventListener('resize', ninetteUpdateShelfScrollbar);
+                thumb.addEventListener('pointerdown', function (event) {
+                    activePointerId = event.pointerId;
+                    dragStartX = event.clientX;
+                    dragStartScroll = shelf.scrollLeft;
+                    event.preventDefault();
+                });
+                window.addEventListener('pointermove', function (event) {
+                    if (event.pointerId !== activePointerId) return;
+                    const trackTravel = scrollbar.clientWidth - thumb.offsetWidth;
+                    const scrollTravel = shelf.scrollWidth - shelf.clientWidth;
+                    if (trackTravel > 0 && scrollTravel > 0) {
+                        shelf.scrollLeft = dragStartScroll + (event.clientX - dragStartX) * scrollTravel / trackTravel;
+                    }
+                });
+                window.addEventListener('pointerup', function (event) {
+                    if (event.pointerId === activePointerId) activePointerId = null;
+                });
+            }
+
             function ninetteRenderBookLevel(levelKey) {
                 const level = NINETTE_BOOK_LEVELS[levelKey];
                 if (!level) return;
@@ -2192,6 +2274,8 @@
                     btn.classList.toggle('active', active);
                     btn.setAttribute('aria-selected', active ? 'true' : 'false');
                 });
+
+                requestAnimationFrame(ninetteUpdateShelfScrollbar);
             }
 
             document.querySelectorAll('.bc-tab').forEach(function (btn) {
@@ -2200,6 +2284,7 @@
                 });
             });
 
+            ninetteEnableShelfGrip();
             ninetteRenderBookLevel('ages-2-5');
         </script>
         <script>
