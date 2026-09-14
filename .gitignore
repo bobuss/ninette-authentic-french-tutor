@@ -1,0 +1,4 @@
+.DS_Store
+tools/.bookclub-drive-token.json
+venv
+__pycache__

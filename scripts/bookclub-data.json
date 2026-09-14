@@ -1,0 +1,291 @@
+{
+  "ages-2-5": {
+    "label": "Ages 2–5",
+    "books": [
+      {
+        "title": "À trois, on a moins froid",
+        "src": "images/ages-2-5/a-trois-on-a-moins-froid--1Qa9lKIo.webp"
+      },
+      {
+        "title": "Ainsi font, font, font les petites marionnettes",
+        "src": "images/ages-2-5/ainsi-font-font-font-les-petites-marionettes--1MvrciFP.webp"
+      },
+      {
+        "title": "Avant de dormir",
+        "src": "images/ages-2-5/avant-de-dormir--1qISlCAW.webp"
+      },
+      {
+        "title": "Bali joue à cache-cache",
+        "src": "images/ages-2-5/bali-joue-cache-cache--1E_paM3U.webp"
+      },
+      {
+        "title": "Bali pique-nique à la maison",
+        "src": "images/ages-2-5/bali-pique-nique-la-maison--1nGJuCPa.webp"
+      },
+      {
+        "title": "Bali va à l'école",
+        "src": "images/ages-2-5/bali-va-l-cole--1l4FLUsw.webp"
+      },
+      {
+        "title": "Bonne journée",
+        "src": "images/ages-2-5/bonne-journ-e--1yLYnpjQ.webp"
+      },
+      {
+        "title": "Brosse et Savon",
+        "src": "images/ages-2-5/brosse-et-savon--1LvZs6mg.webp"
+      },
+      {
+        "title": "C'est moi le plus fort",
+        "src": "images/ages-2-5/c-est-moi-le-plus-fort--1nopteTY.webp"
+      },
+      {
+        "title": "Cinq crayons coquins",
+        "src": "images/ages-2-5/cinq-crayons-coquins--1WgbfAeZ.webp"
+      },
+      {
+        "title": "Couleurs",
+        "src": "images/ages-2-5/couleurs--1JNEv1HK.webp"
+      },
+      {
+        "title": "Elmer",
+        "src": "images/ages-2-5/elmer--1_y6KaLE.webp"
+      },
+      {
+        "title": "Entendre",
+        "src": "images/ages-2-5/entendre--1X8ZugHM.webp"
+      },
+      {
+        "title": "Est-ce que je peux jouer ?",
+        "src": "images/ages-2-5/est-ce-que-je-peux-jouer--1gD1kC-U.webp"
+      },
+      {
+        "title": "Frisson l'écureuil à la plage",
+        "src": "images/ages-2-5/frisson-l-cureuil-la-plage--1qZ86M7q.webp"
+      },
+      {
+        "title": "Je t'aimerai toujours",
+        "src": "images/ages-2-5/je-t-aimerai-toujours--1c9-5UYg.webp"
+      },
+      {
+        "title": "La chèvre et les biquets",
+        "src": "images/ages-2-5/la-ch-vre-et-les-biquets--14quevlf.webp"
+      },
+      {
+        "title": "Lapin Bisou",
+        "src": "images/ages-2-5/lapin-bisou--15mFL9gA.webp"
+      },
+      {
+        "title": "Les métiers",
+        "src": "images/ages-2-5/le-metiers--1pJdA9Qn.webp"
+      },
+      {
+        "title": "Le pain",
+        "src": "images/ages-2-5/le-pain--1vbK8fj7.webp"
+      },
+      {
+        "title": "Le soleil, ça sert à quoi ?",
+        "src": "images/ages-2-5/le-soleil-a-sert-quoi--11XvURAX.webp"
+      },
+      {
+        "title": "Les aventures d'une petite bulle rouge",
+        "src": "images/ages-2-5/les-adventures-d-une-petite-bulle-rouge--185RBkKT.webp"
+      },
+      {
+        "title": "Les cinq sens",
+        "src": "images/ages-2-5/les-cinq-sens--10ETzboW.webp"
+      },
+      {
+        "title": "Mon papa",
+        "src": "images/ages-2-5/mon-papa--1gxyAzF2.webp"
+      },
+      {
+        "title": "Océan, le noir et les couleurs",
+        "src": "images/ages-2-5/oc-an-le-noir-et-les-couleurs--1uc1oroJ.webp"
+      },
+      {
+        "title": "Pablo",
+        "src": "images/ages-2-5/pablo--1k2FYmr2.webp"
+      },
+      {
+        "title": "Papa et moi",
+        "src": "images/ages-2-5/papa-et-moi--16zHDzZR.webp"
+      },
+      {
+        "title": "Pas facile d'attendre !",
+        "src": "images/ages-2-5/pas-facile-d-attendre--1FtFcbeI.webp"
+      },
+      {
+        "title": "Propre",
+        "src": "images/ages-2-5/propre--1Qe6FDpx.webp"
+      },
+      {
+        "title": "Solange la Mésange",
+        "src": "images/ages-2-5/solange-la-m-sange--173qgBHe.webp"
+      },
+      {
+        "title": "Souris",
+        "src": "images/ages-2-5/souris--1UdVlPbW.webp"
+      },
+      {
+        "title": "Superlapin",
+        "src": "images/ages-2-5/superlapin--1MgacOVt.webp"
+      },
+      {
+        "title": "Toucher",
+        "src": "images/ages-2-5/toucher--1iw4a4dj.webp"
+      },
+      {
+        "title": "Trois souris en papier",
+        "src": "images/ages-2-5/trois-souris-en-papier--1IznDaWq.webp"
+      },
+      {
+        "title": "Vroum ! Vroum ! Vroum !",
+        "src": "images/ages-2-5/vroum-vroum-vroum--1Gviw59q.webp"
+      }
+    ]
+  },
+  "k-2": {
+    "label": "Kindergarten – 2nd Grade",
+    "books": [
+      {
+        "title": "Ali Baba et les 40 voleurs",
+        "src": "images/k-2/ali-baba-et-les-40-voleurs--1XnQMa83.webp"
+      },
+      {
+        "title": "Barbe-Bleue",
+        "src": "images/k-2/barbe-bleue--1iQnnzZK.webp"
+      },
+      {
+        "title": "Chien Bleu",
+        "src": "images/k-2/chien-bleu--1TCElAB_.webp"
+      },
+      {
+        "title": "Clément aplati",
+        "src": "images/k-2/cl-ment-aplati--1DVA62Lv.webp"
+      },
+      {
+        "title": "Des rébus pour papa !",
+        "src": "images/k-2/des-r-bus-pour-papa--1KtWuFXG.webp"
+      },
+      {
+        "title": "Doucette",
+        "src": "images/k-2/doucette--12NtclFa.webp"
+      },
+      {
+        "title": "La Belle au bois dormant",
+        "src": "images/k-2/la-belle-au-bois-dormant--17AYJTG7.webp"
+      },
+      {
+        "title": "La cigale et la fourmi ; Le loup et l'agneau",
+        "src": "images/k-2/la-cigale-et-la-fourmi-le-loup-et-l-agneau--1jN_9GBe.webp"
+      },
+      {
+        "title": "Le bonhomme de pain d'épice",
+        "src": "images/k-2/le-bonhomme-de-pain-d-pice--1ED__3_x.webp"
+      },
+      {
+        "title": "Le bonhomme qui souffle le vent",
+        "src": "images/k-2/le-bonhomme-qui-souffle-le-vent--1H7rnlJi.webp"
+      },
+      {
+        "title": "Le Petit Chaperon rouge",
+        "src": "images/k-2/le-petit-chaperon-rouge--15qAOk13.webp"
+      },
+      {
+        "title": "Les malheurs de Barbe-Rouge",
+        "src": "images/k-2/les-malheurs-de-barbe-rouge--1unGwDyX.webp"
+      },
+      {
+        "title": "Les miettes de mon pain",
+        "src": "images/k-2/les-miettes-de-mon-pain--1fCMDnOj.webp"
+      },
+      {
+        "title": "Les musiciens de Brême",
+        "src": "images/k-2/les-musiciens-de-br-me--135KNGCA.webp"
+      },
+      {
+        "title": "Mon papy voit la vie en jaune",
+        "src": "images/k-2/mon-papy-voit-la-vie-en-jaune--1OUY-YCu.webp"
+      },
+      {
+        "title": "Que la fête commence !",
+        "src": "images/k-2/que-la-f-te-commence--1mJTKVFL.webp"
+      },
+      {
+        "title": "Simbad le marin",
+        "src": "images/k-2/simbad-le-marin--1YSCDlxn.webp"
+      }
+    ]
+  },
+  "3-5": {
+    "label": "3rd – 5th Grade",
+    "books": [
+      {
+        "title": "Contes des quatre vents",
+        "src": "images/3-5/contes-des-quatre-vents--1kArwT1h.webp"
+      },
+      {
+        "title": "Le Tour du monde en 80 jours",
+        "src": "images/3-5/le-tour-du-monde-en-80-jours--1OXvLMFh.webp"
+      },
+      {
+        "title": "Les quatre musiciens de Brême",
+        "src": "images/3-5/les-quatre-musiciens-de-br-me--1ocNjrUs.webp"
+      },
+      {
+        "title": "Un coquelicot pour se souvenir",
+        "src": "images/3-5/un-coquelicot-pour-se-souvenir--18hi2xGY.webp"
+      }
+    ]
+  },
+  "middle-school": {
+    "label": "6th – 8th Grade · Middle School",
+    "books": [
+      {
+        "title": "Contes d'Andersen",
+        "src": "images/middle-school/contes-d-andersen--1HcYhiEc.webp"
+      },
+      {
+        "title": "Ib et la petite Christine, suivi de Le jardinier et ses maîtres",
+        "src": "images/middle-school/ibet-la-petite-christine-le-jardinier-et-ses-ma-tres--1XMXyx9Z.webp"
+      },
+      {
+        "title": "L'Appel de la forêt",
+        "src": "images/middle-school/l-appel-de-la-for-t--1a7mYZQ3.webp"
+      },
+      {
+        "title": "L'Épopée du Roi Singe",
+        "src": "images/middle-school/l-pop-e-du-roi-singe--1TKZ2nBk.webp"
+      },
+      {
+        "title": "Le dragon dans la rizière",
+        "src": "images/middle-school/le-dragon-dans-la-rizi-re--1qNpAo8R.webp"
+      },
+      {
+        "title": "Les Aventures de Tom Sawyer",
+        "src": "images/middle-school/les-aventures-de-tom-sawyer--1RQkzKaH.webp"
+      },
+      {
+        "title": "Les Aventures de Tom Sawyer",
+        "src": "images/middle-school/les-aventures-de-tom-sawyer--1yhZUqvr.webp"
+      },
+      {
+        "title": "Les cygnes sauvages",
+        "src": "images/middle-school/les-cygnes-sauvages--1SaIwIVy.webp"
+      },
+      {
+        "title": "Max et les poissons",
+        "src": "images/middle-school/max-et-les-poissons--1HjbE-GB.webp"
+      }
+    ]
+  },
+  "high-school": {
+    "label": "9th – 12th Grade · High School",
+    "books": [
+      {
+        "title": "Les Nouveaux Contes de la Louve",
+        "src": "images/high-school/les-nouveaux-contes-de-la-louve--10sW6f4g.webp"
+      }
+    ]
+  }
+}
