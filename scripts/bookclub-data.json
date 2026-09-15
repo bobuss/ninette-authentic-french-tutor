@@ -347,6 +347,10 @@
       },
       {
         "title": "Les Aventures de Tom Sawyer",
+        "src": "images/middle-school/les-aventures-de-tom-sawyer--1JVDXVEX.webp"
+      },
+      {
+        "title": "Les Aventures de Tom Sawyer",
         "src": "images/middle-school/les-aventures-de-tom-sawyer--1RQkzKaH.webp"
       },
       {
@@ -360,6 +364,14 @@
       {
         "title": "Max et les poissons",
         "src": "images/middle-school/max-et-les-poissons--1HjbE-GB.webp"
+      },
+      {
+        "title": "Surcouf",
+        "src": "images/middle-school/surcouf--1KLZyUhY.webp"
+      },
+      {
+        "title": "Un bon petit diable",
+        "src": "images/middle-school/un-bon-petit-diable--15jV2iK4.webp"
       }
     ]
   },
@@ -367,8 +379,36 @@
     "label": "9th – 12th Grade · High School",
     "books": [
       {
+        "title": "Chronique du règne de Charles IX",
+        "src": "images/high-school/chronique-dubr-gne-de-charles-ix--1GMEgkDQ.webp"
+      },
+      {
+        "title": "Don Quichotte",
+        "src": "images/high-school/don-quichotte--1zOndGuu.webp"
+      },
+      {
+        "title": "Du Guesclin, soldat de France",
+        "src": "images/high-school/du-guesclin-soldat-de-france--1rOHBPjb.webp"
+      },
+      {
         "title": "En canot sur les chemins d'eau du roi",
         "src": "images/high-school/en-canot-sur-les-chemins-d-eau-du-roi--1i_60hML.webp"
+      },
+      {
+        "title": "Avec Tabarly, l'homme libre...",
+        "src": "images/high-school/eric-tabarly--1m0tK0H5.webp"
+      },
+      {
+        "title": "Jacques Cartier",
+        "src": "images/high-school/jacques-cartier--1cyg0V97.webp"
+      },
+      {
+        "title": "Lafayette et Washington : à la conquête de la liberté",
+        "src": "images/high-school/la-fayette-et-washington-la-conqu-te-de-la-libert--1FX8VUh4.webp"
+      },
+      {
+        "title": "Le Français qui possédait l'Amérique",
+        "src": "images/high-school/le-fran-ais-qui-poss-dait-l-am-rique--11dA35jl.webp"
       },
       {
         "title": "Les cow-boys : le Far West",
@@ -377,6 +417,14 @@
       {
         "title": "Les Nouveaux Contes de la Louve",
         "src": "images/high-school/les-nouveaux-contes-de-la-louve--10sW6f4g.webp"
+      },
+      {
+        "title": "Rochambeau en Amérique",
+        "src": "images/high-school/rochambeau-en-am-rique--1MnXhlyq.webp"
+      },
+      {
+        "title": "Sublutetia : La révolte de Hutan",
+        "src": "images/high-school/sublutetia-la-r-volte-de-hutan--1AGDkUT0.webp"
       }
     ]
   }
