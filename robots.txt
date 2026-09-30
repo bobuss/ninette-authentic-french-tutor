@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frenchwithninette.com/sitemap.xml
