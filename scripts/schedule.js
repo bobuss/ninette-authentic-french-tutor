@@ -5,7 +5,8 @@ const SCHEDULE_MARKS = {
     cp: "images/sched-openbook.png",
     elementary: "images/sched-globe.png",
     middle: "images/sched-chalk.png",
-    bookclub: "images/sched-books.png"
+    bookclub: "images/sched-books.png",
+    playdate: "images/sched-playdate.png",
 };
 
 function escapeScheduleHtml(value) {

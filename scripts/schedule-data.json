@@ -3,16 +3,16 @@
     {
       "name": "Monday",
       "classes": [
-        { "time": "8:00 AM – 4:00 PM", "course": "Early French Immersion", "level": "Ages 4–10", "type": "immersion" },
-        { "time": "5:00 PM – 6:30 PM", "course": "French II", "level": "Middle School", "type": "middle" },
-        { "time": "6:30 PM – 7:30 PM", "course": "Book Club", "type": "bookclub" }
+        { "time": "8:00 AM – 1:30 PM", "course": "Early French Immersion", "level": "Ages 4–10", "type": "immersion" },
+        { "time": "1:30 PM – 2:00 PM", "course": "Book Club", "level": "Ages 2-5", "type": "story" },
+        { "time": "2:00 AM – 4:00 PM", "course": "Early French Immersion", "level": "Ages 4–10", "type": "immersion" },
+        { "time": "5:00 PM – 6:30 PM", "course": "French II", "level": "Middle School", "type": "middle" }
       ]
     },
     {
       "name": "Tuesday",
       "classes": [
         { "time": "9:30 AM – 11:00 AM", "course": "French I", "level": "High School", "type": "high" },
-        { "time": "1:00 PM – 1:30 PM", "course": "Book Club", "level": "Storytime 2 to 4", "type": "story" },
         { "time": "3:00 PM – 5:15 PM", "course": "French CP", "level": "Reading Method · Ages 5–6", "type": "cp" },
         { "time": "5:30 PM – 6:30 PM", "course": "French II", "level": "Elementary", "type": "elementary" },
         { "time": "6:30 PM – 7:30 PM", "course": "Book Club", "type": "bookclub" }
@@ -21,16 +21,16 @@
     {
       "name": "Wednesday",
       "classes": [
-        { "time": "8:00 AM – 4:00 PM", "course": "Early French Immersion", "level": "Ages 4–10", "type": "immersion" },
-        { "time": "4:00 PM – 6:00 PM", "course": "French II", "level": "Elementary", "type": "elementary" },
-        { "time": "6:00 PM – 6:30 PM", "course": "Book Club", "type": "bookclub" }
+        { "time": "8:00 AM – 1:30 PM", "course": "Early French Immersion", "level": "Ages 4–10", "type": "immersion" },
+        { "time": "1:30 PM – 2:00 PM", "course": "Book Club", "level": "Ages 2-5", "type": "story" },
+        { "time": "2:00 AM – 4:00 PM", "course": "Early French Immersion", "level": "Ages 4–10", "type": "immersion" },
+        { "time": "5:00 PM – 6:30 PM", "course": "French II", "level": "Middle School", "type": "middle" }
       ]
     },
     {
       "name": "Thursday",
       "classes": [
         { "time": "9:30 AM – 11:00 AM", "course": "French I", "level": "High School", "type": "high" },
-        { "time": "1:00 PM – 1:30 PM", "course": "Book Club", "level": "Storytime 2 to 4", "type": "story" },
         { "time": "3:00 PM – 5:15 PM", "course": "French CP", "level": "Reading Method · Ages 5–6", "type": "cp" },
         { "time": "5:30 PM – 6:30 PM", "course": "French I", "level": "Middle School", "type": "middle" },
         { "time": "6:30 PM – 7:30 PM", "course": "Book Club", "type": "bookclub" }
@@ -39,7 +39,8 @@
     {
       "name": "Friday",
       "classes": [
-        { "time": "8:00 AM – 4:00 PM", "course": "Early French Immersion", "level": "Ages 4–10", "type": "immersion" }
+        { "time": "8:00 AM – 3:30 PM", "course": "Early French Immersion", "level": "Ages 4–10", "type": "immersion" },
+        { "time": "3:30 AM – 5:00 PM", "course": "Play date", "level": "K to 2nd", "type": "playdate" }
       ]
     },
     {
