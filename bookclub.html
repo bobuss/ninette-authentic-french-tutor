@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>French Book Club | French with Ninette</title>
+        <meta name="description" content="The French Book Club by Ninette: an authentic French reading journey for children and teens in Wake Forest, NC.">
+        <link rel="canonical" href="https://frenchwithninette.com/bookclub.html">
+        <link rel="icon" type="image/webp" href="images/img-010.webp">
+        <link rel="preload" as="image" href="images/img-001.png">
+        <link rel="preload" as="image" href="images/img-008-banner.webp">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bookclub-page">
+        <img class="page-background bookclub-page-background" src="images/img-001.png" width="1536" height="1024" fetchpriority="high" alt="">
+        <header class="scroll-nav is-visible" aria-label="Main navigation" aria-hidden="false">
+            <a class="scroll-nav-brand" href="index.html#top">
+                <img class="scroll-nav-fleur" src="images/fleur1.png" alt="" aria-hidden="true">
+                <span>
+                    <strong>Ninette</strong>
+                    <small>French Book Club</small>
+                </span>
+            </a>
+            <nav class="scroll-nav-links" aria-label="Page sections">
+                <a href="index.html#services">Programs</a>
+                <a href="index.html#schedule">Schedule</a>
+                <a href="#bookclub" aria-current="page">Book Club</a>
+                <a class="scroll-nav-cta" href="https://forms.gle/2MNYjAYq3Niakrud9" target="_blank" rel="noopener noreferrer">Book a Call</a>
+            </nav>
+        </header>
+        <main class="bookclub-page-main">
+            <div id="bookclub">
+                <img class="bc-banner" src="images/img-008-banner.webp" width="842" height="350" fetchpriority="high" alt="Ninette Authentic French Tutor · French Book Club · The Great Challenge of 100 Books">
+                <div class="bc-top">
+                    <img class="bc-top-img" src="images/bc-top.webp" width="842" height="268" alt="Book Club levels, reading progress and milestone medals on the château library wall">
+                    <div class="bc-tabs" role="tablist" aria-label="Book Club levels">
+                        <button type="button" class="bc-tab" data-level="ages-2-5" role="tab">Ages 2–5</button>
+                        <button type="button" class="bc-tab" data-level="k-2" role="tab" aria-label="Kindergarten to 2nd Grade">K–2</button>
+                        <button type="button" class="bc-tab" data-level="3-5" role="tab" aria-label="3rd to 5th Grade">Grades 3–5</button>
+                        <button type="button" class="bc-tab" data-level="middle-school" role="tab" aria-label="6th to 8th Grade, Middle School">6–8 · Middle</button>
+                        <button type="button" class="bc-tab" data-level="high-school" role="tab" aria-label="9th to 12th Grade, High School">9–12 · High</button>
+                    </div>
+                    <div class="bc-counter">
+                        <div class="bc-count"><b id="bc-count-n">0</b> <span class="bc-count-label">/ 100 BOOKS DISCOVERED</span></div>
+                        <div class="bc-progress"><div class="bc-progress-fill" id="bc-progress-fill"></div></div>
+                    </div>
+                </div>
+                <img class="bc-cornice" loading="lazy" decoding="async" src="images/bc-cornice.webp" width="842" height="130" alt="Our Growing French Library">
+                <div class="bc-shelf-band">
+                    <img class="bc-shelf-band-img" src="images/bc-shelf-band.webp" width="842" height="317" loading="lazy" decoding="async" alt="Wooden château library cabinet">
+                    <div class="bc-shelf" id="bc-shelf"></div>
+                    <div class="bc-scrollbar" id="bc-scrollbar" hidden aria-hidden="true">
+                        <div class="bc-scroll-thumb" id="bc-scroll-thumb"></div>
+                    </div>
+                </div>
+                <img class="bc-bottom" loading="lazy" decoding="async" src="images/bc-bottom.webp" width="842" height="199" alt="A cozy reading corner with an armchair, a cat, and a cup of tea — &quot;A child who reads in French discovers a wider, kinder, more beautiful world.&quot; — Ninette">
+            </div>
+        </main>
+        <script src="scripts/bookclub.js" defer></script>
+    </body>
+</html>

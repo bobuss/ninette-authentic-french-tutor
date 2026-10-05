@@ -48,35 +48,38 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <img class="page-background" src="images/img-001.png" width="1536" height="1024" fetchpriority="high" alt="">
+        <header class="scroll-nav" aria-label="Main navigation" aria-hidden="true">
+            <a class="scroll-nav-brand" href="#top">
+                <img class="scroll-nav-fleur" src="images/fleur1.png" alt="" aria-hidden="true">
+                <span>
+                    <strong>Ninette</strong>
+                    <small>Authentic French Tutor</small>
+                </span>
+            </a>
+            <nav class="scroll-nav-links" aria-label="Page sections">
+                <a href="#services">Programs</a>
+                <a href="#schedule">Schedule</a>
+                <a href="bookclub.html">Book Club</a>
+                <a class="scroll-nav-cta" href="https://forms.gle/2MNYjAYq3Niakrud9" target="_blank" rel="noopener noreferrer">Book a Call</a>
+            </nav>
+        </header>
         <header id="top" class="hero" aria-label="Ninette Authentic French Tutor">
-            <div class="hero-art">
-                <img class="hero-image" src="images/img-001.png" width="1536" height="1024" fetchpriority="high" alt="Ninette Authentic French Tutor, univers français élégant inspiré des châteaux de la Loire, de la littérature et de la bande dessinée">
-                <!-- Zones HTML transparentes superposées exactement aux boutons dessinés dans l'image. -->
-                <a class="hero-hotspot hs-reserver" href="#contact-section" aria-label="Book a session">
-                    <span>Book a session</span>
-                </a>
-                <a class="hero-hotspot hs-accueil" href="#top" aria-label="Home">
-                    <span>Home</span>
-                </a>
-                <a class="hero-hotspot hs-cours" href="#services" aria-label="Courses">
-                    <span>Courses</span>
-                </a>
-                <a class="hero-hotspot hs-about" href="#about" aria-label="About">
-                    <span>About</span>
-                </a>
-                <a class="hero-hotspot hs-resources" href="#resources" aria-label="Resources">
-                    <span>Resources</span>
-                </a>
-                <a class="hero-hotspot hs-contact" href="#contact-section" aria-label="Contact">
-                    <span>Contact</span>
-                </a>
+            <div class="hero-content">
+                <img class="hero-fleur" src="images/fleur1.png" alt="" aria-hidden="true">
+                <p class="hero-brand">Ninette</p>
+                <h1>Authentic French for Curious Kids in Wake Forest, NC</h1>
+                <p class="hero-description">A premium French learning community for ages 2–17.</p>
+                <div class="hero-actions">
+                    <a class="hero-action hero-action--primary" href="#services">Explore Programs</a>
+                    <a class="hero-action hero-action--secondary" href="https://forms.gle/2MNYjAYq3Niakrud9" target="_blank" rel="noopener noreferrer">Book a Free Discovery Call</a>
+                    <a class="hero-action hero-action--bookclub" href="bookclub.html">Discover the French Book Club</a>
+                </div>
             </div>
         </header>
         <!-- SERVICES -->
         <span id="resources" aria-hidden="true"></span>
         <section id="services">
-            <h1 class="sec-title">Authentic French for Curious Kids in Wake Forest</h1>
-            <div class="sec-sub">A premium French learning community for children ages 2–17: immersion, French books, and personalized instruction.</div>
             <div class="service-grid">
                 <a class="scard-link" href="#detail-bookclub" aria-label="Discover the French Book Club">
                     <div class="scard">
@@ -185,33 +188,7 @@
                     <div class="detail-tag">
                         ✅ Ages 2–17 &nbsp;· &nbsp;✅ 5 age-specific levels &nbsp;· &nbsp;✅ 4 meetings/month &nbsp;· &nbsp;✅ <strong>$200/month per child</strong>
                     </div>
-                    <a href="#bookclub" class="detail-cta">Join the club · Rejoindre ↗</a>
-                </div>
-                <div id="bookclub">
-                    <img class="bc-banner" loading="lazy" decoding="async" src="images/img-008-banner.webp" alt="Ninette Authentic French Tutor · French Book Club · The Great Challenge of 100 Books">
-                    <div class="bc-top">
-                        <img class="bc-top-img" loading="lazy" decoding="async" src="images/bc-top.webp" alt="Book Club levels, reading progress and milestone medals on the château library wall">
-                        <div class="bc-tabs" role="tablist" aria-label="Book Club levels">
-                            <button type="button" class="bc-tab" data-level="ages-2-5" role="tab">Ages 2–5</button>
-                            <button type="button" class="bc-tab" data-level="k-2" role="tab">Kindergarten – 2nd Grade</button>
-                            <button type="button" class="bc-tab" data-level="3-5" role="tab">3rd – 5th Grade</button>
-                            <button type="button" class="bc-tab" data-level="middle-school" role="tab">6th – 8th Grade · Middle School</button>
-                            <button type="button" class="bc-tab" data-level="high-school" role="tab">9th – 12th Grade · High School</button>
-                        </div>
-                        <div class="bc-counter">
-                            <div class="bc-count"><b id="bc-count-n">0</b> <span class="bc-count-label">/ 100 BOOKS DISCOVERED</span></div>
-                            <div class="bc-progress"><div class="bc-progress-fill" id="bc-progress-fill"></div></div>
-                        </div>
-                    </div>
-                    <img class="bc-cornice" loading="lazy" decoding="async" src="images/bc-cornice.webp" alt="Our Growing French Library">
-                    <div class="bc-shelf-band">
-                        <img class="bc-shelf-band-img" src="images/bc-shelf-band.webp" loading="lazy" decoding="async" alt="Wooden château library cabinet">
-                        <div class="bc-shelf" id="bc-shelf"></div>
-                        <div class="bc-scrollbar" id="bc-scrollbar" hidden aria-hidden="true">
-                            <div class="bc-scroll-thumb" id="bc-scroll-thumb"></div>
-                        </div>
-                    </div>
-                    <img class="bc-bottom" loading="lazy" decoding="async" src="images/bc-bottom.webp" alt="A cozy reading corner with an armchair, a cat, and a cup of tea — &quot;A child who reads in French discovers a wider, kinder, more beautiful world.&quot; — Ninette">
+                    <a href="bookclub.html" class="detail-cta">Join the club · Rejoindre ↗</a>
                 </div>
                 <div id="detail-immersion" class="detail-box">
                     <div class="detail-header">
@@ -285,7 +262,7 @@
             </div>
         </div>
         <!-- ABOUT -->
-        <section id="about">
+        <section id="about" class="detail-box">
             <div class="sec-title">About Ninette</div>
             <div class="sec-sub">Mon parcours · My journey</div>
             <div class="about-layout">
@@ -369,9 +346,29 @@
             © 2026 <span>Ninette Authentic French Tutor</span>
             · Wake Forest, NC · arianesclass@gmail.com
         </footer>
-        <script src="scripts/bookclub.js" defer></script>
         <script src="scripts/schedule.js" defer></script>
         <script>
+            const pageBackground = document.querySelector(".page-background");
+
+            function updatePageBackgroundOpacity() {
+                const progress = Math.min(window.scrollY / 400, 1);
+                pageBackground.style.setProperty("--page-background-opacity", String(1 - progress * .5));
+            }
+
+            const scrollNav = document.querySelector(".scroll-nav");
+
+            function updateScrollNavigation() {
+                const isVisible = window.scrollY > 160;
+                scrollNav.classList.toggle("is-visible", isVisible);
+                scrollNav.setAttribute("aria-hidden", String(!isVisible));
+            }
+
+            window.addEventListener("scroll", updatePageBackgroundOpacity, { passive: true });
+            window.addEventListener("scroll", updateScrollNavigation, { passive: true });
+            document.addEventListener("scroll", updatePageBackgroundOpacity, { passive: true });
+            updatePageBackgroundOpacity();
+            updateScrollNavigation();
+
             async function shareNinetteSite() {
                 const data = {
                     title: 'Ninette Authentic French Tutor',

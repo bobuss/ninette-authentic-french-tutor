@@ -49,6 +49,42 @@ function ninetteEnableShelfGrip() {
     });
 }
 
+function ninetteAnimateShelf() {
+    const shelf = document.getElementById("bc-shelf");
+    const scrollbar = document.getElementById("bc-scrollbar");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let direction = 1;
+    let isUserInteracting = false;
+
+    function setUserInteraction(value) {
+        isUserInteracting = value;
+    }
+
+    window.setInterval(function () {
+        const overflow = shelf.scrollWidth - shelf.clientWidth;
+        if (!reducedMotion.matches && !isUserInteracting && overflow > 0) {
+            shelf.scrollLeft += direction;
+            if (shelf.scrollLeft >= overflow) direction = -1;
+            if (shelf.scrollLeft <= 0) direction = 1;
+        }
+    }, 50);
+
+    [shelf, scrollbar].forEach(function (element) {
+        element.addEventListener("pointerdown", function () {
+            setUserInteraction(true);
+        });
+    });
+    window.addEventListener("pointerup", function () {
+        setUserInteraction(false);
+    });
+    shelf.addEventListener("focusin", function () {
+        setUserInteraction(true);
+    });
+    shelf.addEventListener("focusout", function () {
+        setUserInteraction(false);
+    });
+}
+
 function ninetteRenderBookLevel(levelKey) {
     const level = NINETTE_BOOK_LEVELS[levelKey];
     if (!level) return;
@@ -111,6 +147,7 @@ async function initializeBookClub() {
         });
     });
     ninetteEnableShelfGrip();
+    ninetteAnimateShelf();
     ninetteRenderBookLevel("ages-2-5");
 }
 
