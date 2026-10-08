@@ -47,8 +47,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body data-seasonal-effect="autumn-leaves">
         <img class="page-background" src="images/img-001.png" width="1536" height="1024" fetchpriority="high" alt="">
+        <div class="seasonal-effect" aria-hidden="true"></div>
         <header class="scroll-nav" aria-label="Main navigation" aria-hidden="true">
             <a class="scroll-nav-brand" href="#top">
                 <img class="scroll-nav-fleur" src="images/fleur1.png" alt="" aria-hidden="true">
@@ -346,6 +347,7 @@
             © 2026 <span>Ninette Authentic French Tutor</span>
             · Wake Forest, NC · arianesclass@gmail.com
         </footer>
+        <script src="scripts/seasonal-effects.js" defer></script>
         <script src="scripts/schedule.js" defer></script>
         <script>
             const pageBackground = document.querySelector(".page-background");

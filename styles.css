@@ -927,6 +927,61 @@ body {
     height: auto;
 }
 
+body[data-seasonal-effect] > .seasonal-effect {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.seasonal-leaf {
+    position: absolute;
+    top: -18vh;
+    left: var(--leaf-left);
+    width: var(--leaf-size);
+    height: auto;
+    opacity: var(--leaf-opacity);
+    filter: drop-shadow(0 3px 3px rgba(65, 31, 7, .24));
+    transform-origin: center;
+    will-change: transform;
+    animation: seasonal-leaf-fall var(--leaf-duration) linear var(--leaf-delay) infinite;
+}
+
+body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
+    display: none;
+}
+
+@keyframes seasonal-leaf-fall {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    35% {
+        transform: translate3d(var(--leaf-sway), 40vh, 0) rotate(180deg);
+    }
+
+    70% {
+        transform: translate3d(var(--leaf-reverse-sway), 80vh, 0) rotate(380deg);
+    }
+
+    100% {
+        transform: translate3d(var(--leaf-sway), 125vh, 0) rotate(540deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .seasonal-effect {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .seasonal-leaf {
+        filter: none;
+    }
+}
+
 .bc-top {
     position: relative;
     line-height: 0;
@@ -1579,6 +1634,15 @@ img.page-background.bookclub-page-background {
 body > :not(.page-background) {
     position: relative;
     z-index: 1;
+}
+
+body[data-seasonal-effect] > .seasonal-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
 }
 
 body > .scroll-nav {

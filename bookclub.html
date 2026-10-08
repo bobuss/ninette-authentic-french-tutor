@@ -11,9 +11,45 @@
         <link rel="preload" as="image" href="images/img-008-banner.webp">
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Course",
+                "name": "French Book Club",
+                "description": "An authentic French reading club for children and teens, with age-specific books, guided reading, discussion, and cultural discovery in French.",
+                "url": "https://frenchwithninette.com/bookclub.html",
+                "image": "https://frenchwithninette.com/images/img-008-banner.webp",
+                "inLanguage": "fr",
+                "audience": {
+                    "@type": "EducationalAudience",
+                    "educationalRole": "student",
+                    "audienceType": "Children and teens ages 2 to 17"
+                },
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "French with Ninette",
+                    "url": "https://frenchwithninette.com/",
+                    "email": "arianesclass@gmail.com",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Wake Forest",
+                        "addressRegion": "NC",
+                        "postalCode": "27587",
+                        "addressCountry": "US"
+                    }
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "200",
+                    "priceCurrency": "USD",
+                    "description": "Four Book Club sessions per month, per child."
+                }
+            }
+        </script>
     </head>
-    <body class="bookclub-page">
+    <body class="bookclub-page" data-seasonal-effect="autumn-leaves">
         <img class="page-background bookclub-page-background" src="images/img-001.png" width="1536" height="1024" fetchpriority="high" alt="">
+        <div class="seasonal-effect" aria-hidden="true"></div>
         <header class="scroll-nav is-visible" aria-label="Main navigation" aria-hidden="false">
             <a class="scroll-nav-brand" href="index.html#top">
                 <img class="scroll-nav-fleur" src="images/fleur1.png" alt="" aria-hidden="true">
@@ -58,6 +94,7 @@
                 <img class="bc-bottom" loading="lazy" decoding="async" src="images/bc-bottom.webp" width="914" height="210" alt="A cozy reading corner with an armchair, a cat, and a cup of tea - &quot;A child who reads in French discovers a wider, kinder, more beautiful world.&quot; - Ninette">
             </div>
         </main>
+        <script src="scripts/seasonal-effects.js" defer></script>
         <script src="scripts/bookclub.js" defer></script>
     </body>
 </html>
