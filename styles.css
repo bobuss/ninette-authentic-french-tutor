@@ -930,11 +930,12 @@ body {
 .bc-top {
     position: relative;
     line-height: 0;
-    aspect-ratio: 842 / 268;
+    aspect-ratio: 914 / 368;
     overflow: hidden;
 }
 
 .bc-top-img,
+.bc-monthly-wall,
 .bc-cornice,
 .bc-bottom,
 .bc-shelf-band-img {
@@ -961,9 +962,9 @@ body {
 
 .bc-tabs {
     position: absolute;
-    left: 14.3%;
+    left: 16.3%;
     right: 13.3%;
-    top: 0.8%;
+    top: 5.8%;
     height: 15.7%;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1015,7 +1016,7 @@ body {
     position: absolute;
     left: 15.4%;
     right: 15.1%;
-    top: 29%;
+    top: 26%;
     height: 14%;
     display: flex;
     flex-direction: column;
@@ -1063,16 +1064,16 @@ body {
     position: relative;
     line-height: 0;
     background: #241507;
-    aspect-ratio: 842 / 317;
+    aspect-ratio: 914 / 402;
     overflow: hidden;
 }
 
 .bc-shelf {
     position: absolute;
-    left: 18.4%;
-    right: 18.2%;
+    left: 18.2%;
+    right: 16.9%;
     top: 2.2%;
-    bottom: 8.7%;
+    bottom: 17%;
     display: flex;
     flex-direction: column;
     gap: 3%;
