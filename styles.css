@@ -1140,40 +1140,6 @@ body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
     scrollbar-color: #a9803f rgba(0, 0, 0, .35);
 }
 
-.bc-scrollbar {
-    position: absolute;
-    left: 18.9%;
-    right: 18.7%;
-    bottom: 2.5%;
-    height: 5px;
-    border-radius: 99px;
-    background: rgba(20, 10, 4, .62);
-    box-shadow: inset 0 1px 1px rgba(255, 235, 188, .25);
-    cursor: ew-resize;
-}
-
-.bc-scrollbar[hidden] {
-    display: none;
-}
-
-.bc-scroll-thumb {
-    position: absolute;
-    top: -3px;
-    bottom: -3px;
-    left: 0;
-    min-width: 32px;
-    border: 1px solid #e8c77c;
-    border-radius: 99px;
-    background: repeating-linear-gradient(90deg, #bd8535 0 2px, #f0d18b 2px 4px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .7);
-    cursor: grab;
-    touch-action: none;
-}
-
-.bc-scroll-thumb:active {
-    cursor: grabbing;
-}
-
 .bc-shelf.is-empty {
     align-items: center;
     justify-content: center;

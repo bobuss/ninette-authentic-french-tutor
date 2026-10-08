@@ -4,54 +4,8 @@ function escapeHtml(value) {
     return value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function ninetteUpdateShelfScrollbar() {
-    const shelf = document.getElementById("bc-shelf");
-    const scrollbar = document.getElementById("bc-scrollbar");
-    const thumb = document.getElementById("bc-scroll-thumb");
-    const overflow = shelf.scrollWidth - shelf.clientWidth;
-    scrollbar.hidden = overflow <= 0;
-    if (overflow <= 0) return;
-
-    const trackWidth = scrollbar.clientWidth;
-    const thumbWidth = Math.max(32, trackWidth * shelf.clientWidth / shelf.scrollWidth);
-    const travel = trackWidth - thumbWidth;
-    thumb.style.width = thumbWidth + "px";
-    thumb.style.transform = "translateX(" + (travel * shelf.scrollLeft / overflow) + "px)";
-}
-
-function ninetteEnableShelfGrip() {
-    const shelf = document.getElementById("bc-shelf");
-    const scrollbar = document.getElementById("bc-scrollbar");
-    const thumb = document.getElementById("bc-scroll-thumb");
-    let dragStartX = 0;
-    let dragStartScroll = 0;
-    let activePointerId = null;
-
-    shelf.addEventListener("scroll", ninetteUpdateShelfScrollbar, { passive: true });
-    shelf.addEventListener("load", ninetteUpdateShelfScrollbar, true);
-    window.addEventListener("resize", ninetteUpdateShelfScrollbar);
-    thumb.addEventListener("pointerdown", function (event) {
-        activePointerId = event.pointerId;
-        dragStartX = event.clientX;
-        dragStartScroll = shelf.scrollLeft;
-        event.preventDefault();
-    });
-    window.addEventListener("pointermove", function (event) {
-        if (event.pointerId !== activePointerId) return;
-        const trackTravel = scrollbar.clientWidth - thumb.offsetWidth;
-        const scrollTravel = shelf.scrollWidth - shelf.clientWidth;
-        if (trackTravel > 0 && scrollTravel > 0) {
-            shelf.scrollLeft = dragStartScroll + (event.clientX - dragStartX) * scrollTravel / trackTravel;
-        }
-    });
-    window.addEventListener("pointerup", function (event) {
-        if (event.pointerId === activePointerId) activePointerId = null;
-    });
-}
-
 function ninetteAnimateShelf() {
     const shelf = document.getElementById("bc-shelf");
-    const scrollbar = document.getElementById("bc-scrollbar");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let direction = 1;
     let isUserInteracting = false;
@@ -69,11 +23,6 @@ function ninetteAnimateShelf() {
         }
     }, 50);
 
-    [shelf, scrollbar].forEach(function (element) {
-        element.addEventListener("pointerdown", function () {
-            setUserInteraction(true);
-        });
-    });
     window.addEventListener("pointerup", function () {
         setUserInteraction(false);
     });
@@ -134,7 +83,6 @@ function ninetteRenderBookLevel(levelKey) {
         button.classList.toggle("active", active);
         button.setAttribute("aria-selected", active ? "true" : "false");
     });
-    requestAnimationFrame(ninetteUpdateShelfScrollbar);
 }
 
 async function initializeBookClub() {
@@ -146,7 +94,6 @@ async function initializeBookClub() {
             ninetteRenderBookLevel(button.dataset.level);
         });
     });
-    ninetteEnableShelfGrip();
     ninetteAnimateShelf();
     ninetteRenderBookLevel("ages-2-5");
 }
