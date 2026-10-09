@@ -1,4 +1,39 @@
 {
+  "monthly": {
+    "label": "Livres du mois d'octobre",
+    "books": [
+      {
+        "title": "Le monstre amoureux",
+        "level": "ages-2-5",
+        "src": "images/book-covers/monthly/le-monstre-amoureux.webp"
+      },
+      {
+        "title": "Comment ratatiner les cauchemars ?",
+        "level": "ages-2-5",
+        "src": "images/book-covers/monthly/comment-ratatiner-les-cauchemars.webp"
+      },
+      {
+        "title": "Y en a marre des cauchemars !",
+        "level": "ages-2-5",
+        "src": "images/book-covers/monthly/y-en-a-marre-des-cauchemars.webp"
+      },
+      {
+        "title": "Hansel et Gretel",
+        "level": "ages-2-5",
+        "src": "images/book-covers/monthly/hansel-et-gretel.webp"
+      },
+      {
+        "title": "Panique chez les sorcières",
+        "level": "ages-2-5",
+        "src": "images/book-covers/monthly/panique-chez-les-sorcieres.webp"
+      },
+      {
+        "title": "Va-t'en, Grand Monstre Vert !",
+        "level": "ages-2-5",
+        "src": "images/book-covers/monthly/va-t-en-grand-monstre-vert.webp"
+      }
+    ]
+  },
   "ages-2-5": {
     "label": "Ages 2–5",
     "books": [

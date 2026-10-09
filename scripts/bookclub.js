@@ -39,8 +39,13 @@ function ninetteRenderBookLevel(levelKey) {
     if (!level) return;
 
     const books = level.books;
-    document.getElementById("bc-count-n").textContent = books.length;
-    document.getElementById("bc-progress-fill").style.width = books.length + "%";
+    const monthlyBooks = (NINETTE_BOOK_LEVELS.monthly && NINETTE_BOOK_LEVELS.monthly.books) || [];
+    const monthlyCount = monthlyBooks.filter(function (book) {
+        return book.level === levelKey;
+    }).length;
+    const bookCount = books.length + monthlyCount;
+    document.getElementById("bc-count-n").textContent = bookCount;
+    document.getElementById("bc-progress-fill").style.width = bookCount + "%";
     const shelf = document.getElementById("bc-shelf");
     shelf.scrollLeft = 0;
     shelf.classList.toggle("is-empty", books.length === 0);
@@ -59,12 +64,9 @@ function ninetteRenderBookLevel(levelKey) {
             });
             return '<div class="bc-shelf-row">' + rowBooks.map(function (book, rowBookIndex) {
                 const bookIndex = rowBookIndex * 2 + rowIndex;
-                const isTall = bookIndex % 8 === 0;
-                const isTallSpacer = rowIndex === 1 && bookIndex > 0 && (bookIndex - 1) % 8 === 0;
-                const sizeClass = isTall ? " is-tall" : (bookIndex % 3 === 0 ? " is-compact" : "");
-                const spacer = isTallSpacer ? '<figure class="bc-book is-spacer is-tall" aria-hidden="true"></figure>' : "";
+                const sizeClass = bookIndex % 3 === 0 ? " is-compact" : "";
                 const title = escapeHtml(book.title);
-                return spacer + '<figure class="bc-book' + sizeClass + '" title="' + title + '">' +
+                return '<figure class="bc-book' + sizeClass + '" title="' + title + '">' +
                     '<img loading="lazy" decoding="async" src="' + book.src.replace(/^images\//, "images/book-covers/") + '" alt="' + title + '"></figure>';
             }).join("") + "</div>";
         }).join("");
@@ -85,6 +87,46 @@ function ninetteRenderBookLevel(levelKey) {
     });
 }
 
+function ninetteRenderMonthlyBooks() {
+    const monthly = NINETTE_BOOK_LEVELS.monthly;
+    const container = document.getElementById("bc-monthly-books");
+    if (!monthly || !container) return;
+
+    container.innerHTML = monthly.books.map(function (book) {
+        const title = escapeHtml(book.title);
+        return '<figure class="bc-monthly-book" title="' + title + '">' +
+            '<img decoding="async" src="' + book.src + '" alt="' + title + '"></figure>';
+    }).join("");
+
+    const books = Array.from(container.querySelectorAll(".bc-monthly-book"));
+
+    container.addEventListener("pointermove", function (event) {
+        if (event.pointerType !== "mouse") return;
+        const containerBounds = container.getBoundingClientRect();
+        const pointerX = event.clientX - containerBounds.left;
+
+        books.forEach(function (book) {
+            const bounds = book.getBoundingClientRect();
+            const bookCenter = bounds.left - containerBounds.left + bounds.width / 2;
+            const distance = Math.abs(pointerX - bookCenter);
+            const proximity = Math.max(0, 1 - distance / (bounds.width * 1.25));
+            const bookStyle = getComputedStyle(book);
+            const lift = bookStyle.getPropertyValue("--monthly-lift").trim();
+            const tilt = bookStyle.getPropertyValue("--monthly-tilt").trim();
+            const scale = (1 + proximity * .28).toFixed(3);
+            const rise = Math.round(proximity * 18);
+            book.style.animation = "none";
+            book.style.transform = "translateY(calc(" + lift + " - " + rise + "px)) rotate(" + tilt + ") scale(" + scale + ")";
+        });
+    });
+
+    container.addEventListener("pointerleave", function () {
+        books.forEach(function (book) {
+            book.style.removeProperty("transform");
+        });
+    });
+}
+
 async function initializeBookClub() {
     const response = await fetch("scripts/bookclub-data.json");
     if (!response.ok) throw new Error("Could not load the Book Club catalogue.");
@@ -95,6 +137,7 @@ async function initializeBookClub() {
         });
     });
     ninetteAnimateShelf();
+    ninetteRenderMonthlyBooks();
     ninetteRenderBookLevel("ages-2-5");
 }
 

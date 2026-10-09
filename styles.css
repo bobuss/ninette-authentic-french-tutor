@@ -985,7 +985,7 @@ body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
 .bc-top {
     position: relative;
     line-height: 0;
-    aspect-ratio: 914 / 368;
+    aspect-ratio: 914 / 333;
     overflow: hidden;
 }
 
@@ -998,6 +998,153 @@ body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
     width: 100%;
     height: auto;
     margin: 0;
+}
+
+.bc-monthly {
+    position: relative;
+    aspect-ratio: 914 / 296;
+    overflow: hidden;
+}
+
+.bc-monthly-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.4% 9.5% 4.8%;
+    z-index: 1;
+}
+
+.bc-monthly h2 {
+    display: flex;
+    align-items: center;
+    gap: .75em;
+    margin: 0 0 2.2%;
+    color: #4d321d;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(.85rem, 2.3vw, 1.6rem);
+    letter-spacing: 0;
+    line-height: 1;
+    text-shadow: 0 1px rgba(255, 248, 232, .8);
+}
+
+.bc-monthly h2::before,
+.bc-monthly h2::after {
+    width: clamp(1.4rem, 5vw, 3.2rem);
+    height: 1px;
+    background: #9a6c3f;
+    content: "";
+}
+
+.bc-monthly-books {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    flex: 1;
+}
+
+.bc-monthly-book {
+    position: absolute;
+    bottom: 0;
+    left: var(--monthly-left);
+    width: 22%;
+    height: 92%;
+    margin: 0;
+    padding: .45%;
+    isolation: isolate;
+    background: rgba(255, 245, 220, .74);
+    border: 1px solid rgba(83, 48, 26, .42);
+    border-radius: 3px;
+    box-shadow: 0 7px 12px rgba(47, 23, 9, .38), inset 0 1px rgba(255, 255, 255, .72);
+    transform: translateY(calc(var(--monthly-lift) - var(--dock-rise, 0px))) rotate(var(--monthly-tilt)) scale(var(--dock-scale, 1));
+    transform-origin: center bottom;
+    transition: box-shadow .18s ease, filter .18s ease, transform .18s cubic-bezier(.2, .8, .25, 1);
+}
+
+.bc-monthly-book::after {
+    position: absolute;
+    inset: 3% 54% 3% 5%;
+    z-index: 1;
+    border-radius: 2px;
+    background: linear-gradient(105deg, rgba(255, 255, 255, .48), transparent);
+    content: "";
+    opacity: .48;
+    pointer-events: none;
+}
+
+.bc-monthly-book:nth-child(1) {
+    --monthly-delay: .06s;
+    --monthly-left: 0%;
+    --monthly-lift: 3%;
+    --monthly-tilt: -7deg;
+    z-index: 1;
+}
+
+.bc-monthly-book:nth-child(2) {
+    --monthly-delay: .13s;
+    --monthly-left: 15.6%;
+    --monthly-lift: 0%;
+    --monthly-tilt: -3.6deg;
+    z-index: 2;
+}
+
+.bc-monthly-book:nth-child(3) {
+    --monthly-delay: .2s;
+    --monthly-left: 31.2%;
+    --monthly-lift: 4%;
+    --monthly-tilt: -1deg;
+    z-index: 3;
+}
+
+.bc-monthly-book:nth-child(4) {
+    --monthly-delay: .27s;
+    --monthly-left: 46.8%;
+    --monthly-lift: 1%;
+    --monthly-tilt: 2deg;
+    z-index: 4;
+}
+
+.bc-monthly-book:nth-child(5) {
+    --monthly-delay: .34s;
+    --monthly-left: 62.4%;
+    --monthly-lift: 4%;
+    --monthly-tilt: 4.4deg;
+    z-index: 5;
+}
+
+.bc-monthly-book:nth-child(6) {
+    --monthly-delay: .41s;
+    --monthly-left: 78%;
+    --monthly-lift: 0%;
+    --monthly-tilt: 7deg;
+    z-index: 6;
+}
+
+@media (hover: hover) {
+    .bc-monthly-books:hover .bc-monthly-book {
+        box-shadow: 0 18px 25px rgba(47, 23, 9, .58), inset 0 1px rgba(255, 255, 255, .9);
+        filter: saturate(1.08) brightness(1.05);
+    }
+
+    .bc-monthly-book:hover::after {
+        opacity: .7;
+    }
+}
+
+.bc-monthly-book img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(2px 3px 3px rgba(38, 21, 9, .34));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bc-monthly-book {
+        animation: none;
+        transition: none;
+    }
 }
 
 .bc-top-img {
@@ -1119,19 +1266,19 @@ body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
     position: relative;
     line-height: 0;
     background: #241507;
-    aspect-ratio: 914 / 402;
+    aspect-ratio: 914 / 360;
     overflow: hidden;
 }
 
 .bc-shelf {
     position: absolute;
-    left: 18.2%;
-    right: 16.9%;
-    top: 2.2%;
-    bottom: 17%;
+    left: 18.5%;
+    right: 18.8%;
+    top: 3.5%;
+    bottom: 27%;
     display: flex;
     flex-direction: column;
-    gap: 3%;
+    gap: 8%;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0 .5% .3%;
@@ -1156,6 +1303,10 @@ body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
     overflow: visible;
 }
 
+.bc-shelf-row:first-child {
+    flex: 0 0 40%;
+}
+
 .bc-book {
     flex: 0 0 auto;
     margin: 0;
@@ -1169,10 +1320,7 @@ body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
 }
 
 .bc-book.is-tall {
-    height: 203%;
-    align-self: flex-start;
-    position: relative;
-    z-index: 1;
+    height: 100%;
 }
 
 .bc-book.is-spacer {
@@ -1217,6 +1365,22 @@ body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
 }
 
 @media(max-width: 480px) {
+    .bc-monthly-content {
+        padding: 4% 5% 4.8%;
+    }
+
+    .bc-monthly-books {
+        gap: 1.7%;
+    }
+
+    .bc-monthly-book {
+        width: 23%;
+        height: 90%;
+        padding: .3%;
+        border-radius: 2px;
+        box-shadow: 0 4px 7px rgba(47, 23, 9, .35);
+    }
+
     .bc-tabs {
         top: .8%;
         height: 11.5%;
