@@ -935,6 +935,132 @@ body[data-seasonal-effect] > .seasonal-effect {
     pointer-events: none;
 }
 
+body[data-seasonal-effect="halloween"] > .seasonal-effect::before {
+    background: rgba(17, 12, 28, .13);
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.seasonal-halloween-character {
+    position: absolute;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-drag: none;
+    will-change: transform, opacity;
+}
+
+.seasonal-halloween-runner {
+    left: 0;
+    top: var(--halloween-lane);
+    width: clamp(64px, 9vw, 122px);
+    opacity: 0;
+    animation: halloween-cartoon-dash 27s cubic-bezier(.45, 0, .55, 1) var(--halloween-delay) infinite both;
+}
+
+.seasonal-halloween-jump {
+    left: 50%;
+    top: 50%;
+    width: clamp(120px, 22vw, 250px);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.08) rotate(-18deg);
+    animation: halloween-cartoon-pop 31s ease-in-out var(--halloween-delay) infinite both;
+}
+
+.seasonal-halloween-decoration {
+    position: absolute;
+    width: clamp(58px, 10vw, 138px);
+    z-index: 1;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.seasonal-halloween-decoration-1 {
+    right: 0;
+    top: 34vh;
+}
+
+.seasonal-halloween-decoration-5 {
+    left: 0;
+    top: 56vh;
+}
+
+.seasonal-halloween-decoration-0 {
+    bottom: 0;
+    left: 7%;
+}
+
+.seasonal-halloween-decoration-2 {
+    bottom: 0;
+    left: 30%;
+}
+
+.seasonal-halloween-decoration-3 {
+    bottom: 0;
+    right: 30%;
+}
+
+.seasonal-halloween-decoration-4 {
+    bottom: 0;
+    right: 7%;
+}
+
+@keyframes halloween-cartoon-dash {
+    0%, 2% {
+        opacity: 0;
+        transform: translate3d(calc(var(--halloween-direction) * -130vw), 0, 0) rotate(-12deg) scale(.78);
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    10% {
+        transform: translate3d(calc(var(--halloween-direction) * -82vw), -2vh, 0) rotate(7deg) scale(1.02);
+    }
+
+    17% {
+        opacity: 1;
+        transform: translate3d(calc(var(--halloween-direction) * 12vw), 2vh, 0) rotate(-8deg) scale(.94);
+    }
+
+    23% {
+        opacity: 0;
+        transform: translate3d(calc(var(--halloween-direction) * 130vw), -1vh, 0) rotate(11deg) scale(.8);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(calc(var(--halloween-direction) * 130vw), 0, 0) rotate(11deg) scale(.8);
+    }
+}
+
+@keyframes halloween-cartoon-pop {
+    0%, 54% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.08) rotate(-18deg);
+    }
+
+    58% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.12) rotate(5deg);
+    }
+
+    61% {
+        transform: translate(-50%, -50%) scale(.98) rotate(-3deg);
+    }
+
+    63% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+
+    68%, 100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.55) rotate(12deg);
+    }
+}
+
 .seasonal-leaf {
     position: absolute;
     top: -18vh;
@@ -948,7 +1074,7 @@ body[data-seasonal-effect] > .seasonal-effect {
     animation: seasonal-leaf-fall var(--leaf-duration) linear var(--leaf-delay) infinite;
 }
 
-body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
+body:not([data-seasonal-effect="autumn-leaves"]):not([data-seasonal-effect="halloween"]) .seasonal-effect {
     display: none;
 }
 
@@ -971,7 +1097,11 @@ body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .seasonal-effect {
+    body[data-seasonal-effect="autumn-leaves"] > .seasonal-effect {
+        display: none;
+    }
+
+    .seasonal-halloween-character {
         display: none;
     }
 }
@@ -979,6 +1109,26 @@ body:not([data-seasonal-effect="autumn-leaves"]) .seasonal-effect {
 @media (max-width: 700px) {
     .seasonal-leaf {
         filter: none;
+    }
+
+    .seasonal-halloween-decoration {
+        width: clamp(44px, 15vw, 68px);
+    }
+
+    .seasonal-halloween-decoration-0 {
+        left: 4%;
+    }
+
+    .seasonal-halloween-decoration-2 {
+        left: 24%;
+    }
+
+    .seasonal-halloween-decoration-3 {
+        right: 24%;
+    }
+
+    .seasonal-halloween-decoration-4 {
+        right: 4%;
     }
 }
 

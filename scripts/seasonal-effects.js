@@ -1,8 +1,49 @@
 function ninetteInitializeSeasonalEffect() {
-    if (document.body.dataset.seasonalEffect !== "autumn-leaves" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
+    const effect = document.body.dataset.seasonalEffect;
     const container = document.querySelector(".seasonal-effect");
-    if (!container) return;
+    if (!container || !["autumn-leaves", "halloween"].includes(effect)) return;
+
+    if (effect === "halloween") {
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const mobile = window.matchMedia("(max-width: 700px)").matches;
+        const characters = mobile
+            ? [{ image: 1, type: "runner" }, { image: 5, type: "runner" }, { image: 10, type: "jump" }, { image: 14, type: "runner" }]
+            : [
+                { image: 1, type: "runner" }, { image: 3, type: "runner" },
+                { image: 5, type: "runner" }, { image: 7, type: "jump" },
+                { image: 9, type: "runner" }, { image: 11, type: "runner" },
+                { image: 12, type: "jump" }, { image: 14, type: "runner" }
+            ];
+        const fragment = document.createDocumentFragment();
+
+        if (!reducedMotion) {
+            characters.forEach(function (character, index) {
+                const image = document.createElement("img");
+                image.className = "seasonal-halloween-character seasonal-halloween-" + character.type;
+                image.src = "images/halloween/halloween-" + character.image + ".webp";
+                image.alt = "";
+                image.draggable = false;
+                image.style.setProperty("--halloween-lane", (12 + (index * 13) % 76) + "vh");
+                image.style.setProperty("--halloween-delay", (index * (mobile ? 2.8 : 2.2)) + "s");
+                image.style.setProperty("--halloween-direction", index % 2 ? "1" : "-1");
+                fragment.appendChild(image);
+            });
+        }
+
+        [1, 2, 3, 4, 5, 6].forEach(function (decoration, index) {
+            const image = document.createElement("img");
+            image.className = "seasonal-halloween-decoration seasonal-halloween-decoration-" + index;
+            image.src = "images/halloween/decors-" + decoration + ".webp";
+            image.alt = "";
+            image.draggable = false;
+            fragment.appendChild(image);
+        });
+
+        container.appendChild(fragment);
+        return;
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const mobile = window.matchMedia("(max-width: 700px)").matches;
     const leaves = [
